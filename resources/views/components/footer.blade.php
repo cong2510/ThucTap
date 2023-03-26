@@ -169,9 +169,8 @@
     }
 </style>
 
-<footer class="site-footer"
-    style="width: 100%;background: url(https://media.istockphoto.com/id/1090460922/vector/abstract-black-lines-pattern-repeat-striped-background-and-texture-luxury-style.jpg?s=612x612&w=0&k=20&c=231bcMZcn3wj0LsIJiIQv1lDfOQAXsrcnxMVR7o_ja0=)">
-    <div class="container" style="width: 100%;">
+<footer class="site-footer" style="width: 100%;background: url({{ asset('images/footer.jpg') }})">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <h6>About</h6>

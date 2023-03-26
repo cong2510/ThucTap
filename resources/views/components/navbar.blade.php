@@ -11,7 +11,8 @@
                     <i class="fa-sharp fa-solid fa-bars fa-3x" style="color:#66CC00;"></i>
                 </button>
                 <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1"
-                    style="width: 300px;height: 260px;">
+                    style="width: 300px;height: 300px;">
+                    <li><a class="dropdown-item" href="{{ route('index') }}">TRANG CHỦ</a></li>
                     <li><a class="dropdown-item" href="#">LỊCH CHIẾU</a></li>
                     <li><a class="dropdown-item" href="#">HỆ THỐNG RẠP</a></li>
                     <li><a class="dropdown-item" href="#">KHUYỄN MÃI</a></li>
