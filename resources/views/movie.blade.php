@@ -45,41 +45,45 @@
     <header>
         <x-navbar />
     </header>
-    <div class="container" style="padding-top: 100px;">
-        <div class="movie-tittle">
-            <h3 style="font-weight: bold"><a href="{{ route('index') }}">TRANG CHỦ</a> | DEMON SLAYER</h3>
+    <div class="container" style="padding-top: 100px;padding-bottom: 100px">
+        <div class="movie-tittle" style="padding-bottom: 30px">
+            <h3 style="font-weight: bold"><a href="{{ route('index') }}">TRANG CHỦ</a> | {{ $movie['TenPhim'] }}</h3>
         </div>
         <div class="row">
             <div class="movie-picture col-4">
-                <img src="{{ asset('images/phim1.jpg') }}" alt="">
+                <img src="/images/{{ $movie['Img'] }}"alt="">
             </div>
             <div class="movie-content col-8">
                 <div class="movie-name">
-                    <h3 style="font-weight: bold">DEMON SLAYER</h3>
+                    <h3 style="font-weight: bold">{{ $movie['TenPhim'] }}</h3>
                 </div>
                 <div class="movie-detail">
-                    <p>Sau trận chiến khốc liệt với anh em quỷ Thượng Huyền Lục Gyuutarou và Daki tại Phố Đèn Đỏ,
-                        Tanjiro và các kiếm sĩ diệt quỷ đều bị thương nặng, thanh gươm của Tanjiro cũng bị hư hỏng nặng
-                        và cậu cần một thanh gươm mới để tiếp tục làm nhiệm vụ...</p>
+                    <p>{{ $movie['Mota'] }}</p>
                 </div>
                 <ul class="movie-info">
                     <li>
                         <span class="col-left">Thể loại: </span>
-                        <span class="col-right">Animation</span>
+                        @foreach ($theloais as $theloai)
+                            <span class="col-right">
+                            @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
+                                {{ $theloai['TenTheLoai'] }}
+                            @endif</span>
+                        @endforeach
                     </li>
                     <li>
                         <span class="col-left">Khởi chiếu: </span>
-                        <span class="col-right">2023-03-22</span>
+                        <span class="col-right">{{ $movie['KhoiChieu'] }}</span>
                     </li>
                     <li>
                         <span class="col-left">Thời lượng: </span>
-                        <span class="col-right">110 phút</span>
+                        <span class="col-right">{{ $movie['ThoiLuong'] }}</span>
                     </li>
                     <li>
                         <span class="col-left">
                             <button type="button" class="btn btn-muave" style="background: #66CC00;margin-right: 10px">
                                 <a href="#"
-                                    style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 8px;">XEM TRAILER</a>
+                                    style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 8px;">XEM
+                                    TRAILER</a>
                             </button>
                         </span>
                         <span class="col-right">
@@ -93,6 +97,9 @@
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="container">
+
     </div>
     <x-event />
     <x-footer />
