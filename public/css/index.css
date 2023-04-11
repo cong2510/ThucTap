@@ -41,10 +41,17 @@ nav .dropdown .dropdown-item:hover {
 
 .btn-muave:hover,
 .btn-dangnhap:hover {
-    background-color: inherit;
-    border-color: #26272b;
+    background-color: #60CC00;
+    box-shadow: 0 2px #404040;
+    transform: translateY(2px);
 }
 
+/* .btn-muave:hover,
+.btn-dangnhap:active {
+    background-color: #60CC00;
+    box-shadow: 0 2px #404040;
+    transform: translateY(2px);
+} */
 
 .nav {
     justify-content: center;
@@ -96,10 +103,6 @@ swiper-slide img {
     transition: .3s ease-in-out;
 }
 
-swiper-slide img:hover {
-    transform: scale(1.1);
-}
-
 #pills-tabContent {
     padding-bottom: 60px;
 }
@@ -119,4 +122,8 @@ swiper-slide img:hover {
 
 .product-name:hover {
     color: #66CC00;
+}
+
+.product-slide img:hover {
+    transform: scale(1.1);
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Cinema - Hệ thống rạp chiếu phim</title>
     @include('cdn')
 </head>
 
@@ -35,8 +35,8 @@
                 <div class="container" style="width: 90%">
                     <swiper-container class="mySwiper" slides-per-view="5" space-between="30" free-mode="true">
                         @foreach ($movies as $movie)
-                            @if ($movie['KhoiChieu'] < Carbon\Carbon::today())
-                                <swiper-slide>
+                            @if ($movie['KhoiChieu'] <= Carbon\Carbon::today())
+                                <swiper-slide class="product-slide">
                                     <div class="card border-0" style="background-color: transparent !important;">
                                         <a href="{{ route('movie', $movie['IDPhim']) }}" title="">
                                             <img src="images/{{ $movie['Img'] }}" alt="..." />
