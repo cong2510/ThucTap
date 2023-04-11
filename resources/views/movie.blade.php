@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{ $movie['TenPhim'] }} - Cinema</title>
     @include('cdn')
     <style>
         .movie-info {
@@ -88,7 +88,7 @@
                             </button>
                         </span>
                         <span class="col-right">
-                            <button type="button" class="btn btn-muave" style="background: #66CC00;">
+                            <button type="button" class="btn btn-muave hover-bg-white" style="background: #66CC00;">
                                 <a href="#"
                                     style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 8px;">MUA
                                     VÉ</a>
