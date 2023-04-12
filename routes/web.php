@@ -30,6 +30,7 @@ Route::get('/movieAdmin', function () {
     return view('movieAdmin');
 })->name('movieAdmin');
 
+//admin
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/dashboard', [AdminController::class, 'show_dashboard']);
 Route::get('/logout', [AdminController::class, 'logout']);
@@ -49,9 +50,7 @@ Route::get('/movieAddTicket', function () {
 })->name('movieAddTicket');
 
 //User
-Route::get('/movieUser', function () {
-    return view('movieUser');
-})->name('movieUser');
+Route::get('/movieUser', [UserController::class, 'all_User'])->name('movieUser');
 Route::get('/add-User', [UserController::class, 'add_User']);
-Route::get('/all-User', [CategoryProduct::class, 'all_User']);
+Route::get('/all-User', [UserController::class, 'all_User']);
 Route::post('/save-User', [UserController::class, 'save_User']);

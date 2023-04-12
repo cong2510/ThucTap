@@ -14,13 +14,11 @@ class AdminController extends Controller
         return view('/movieLoginAdmin');
     }
     public function show_dashboard(){
-
         return view('/movieAdmin');
     }
     public function dashboard(Request $request){
         $email = $request->email;
         $password = md5($request ->password);
-
         $result= DB::table('admin')->where('email',$email)->where('password',$password)->get();
         if(count($result)>0){
             Session::put('data_admin',$result[0]);
