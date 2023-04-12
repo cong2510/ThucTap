@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +47,11 @@ Route::get('/movieTicket', function () {
 Route::get('/movieAddTicket', function () {
     return view('movieAddTicket');
 })->name('movieAddTicket');
+
+//User
+Route::get('/movieUser', function () {
+    return view('movieUser');
+})->name('movieUser');
+Route::get('/add-User', [UserController::class, 'add_User']);
+Route::get('/all-User', [CategoryProduct::class, 'all_User']);
+Route::post('/save-User', [UserController::class, 'save_User']);

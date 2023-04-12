@@ -40,7 +40,7 @@
                 <a class="nav-link " href="">Quản Lý Phim</a>
             </li>
             <li class="nav-item col-md-2">
-                <a class="nav-link " href=""> Quản Lí Người Dùng</a>
+                <a class="nav-link " href="{{ route('movieUser') }}"> Quản Lí Người Dùng</a>
             </li>
             <li class="nav-item col-md-2">
                 <a class="nav-link " href="{{ route('movieTicket') }}"> Quản Lí Vé</a>
