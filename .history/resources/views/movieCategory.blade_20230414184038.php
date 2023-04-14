@@ -40,12 +40,10 @@
                         <td>{{$category->IDTheLoai}} </td>
                         <td>{{$category->TenTheLoai}} </td>
                         <td width="50px">
-                            <a href="{{URL::to('/edit-Category/'.$category->IDTheLoai)}}"><button
-                                    class="btn btn-warning">Sửa</button></a>
+                            <a href=" "><button class="btn btn-warning">Sửa</button></a>
                         </td>
                         <td width="50px">
-                            <a href="{{URL::to('/delete-Category/'.$category->IDTheLoai)}}"><button
-                                    class="btn btn-danger">Xoá</button></a>
+                            <button class="btn btn-danger">Xoá</button>
                         </td>
                     </tr>
                     @endforeach

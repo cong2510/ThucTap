@@ -68,6 +68,3 @@ Route::get('/movieCategory', [CategoryController::class, 'all_Category'])->name(
 Route::get('/add-Category', [CategoryController::class, 'add_Category']);
 Route::get('/all-Category', [CategoryController::class, 'all_Category']);
 Route::post('/save-Category', [CategoryController::class, 'save_Category']);
-Route::get('/edit-Category/{IDTheLoai}', [CategoryController::class, 'edit_Category']);
-Route::get('/delete-Category/{IDTheLoai}', [CategoryController::class, 'delete_Category']);
-Route::post('/update-Category', [CategoryController::class, 'update_Category']);

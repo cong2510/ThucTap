@@ -15,41 +15,35 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <style>
-
-    </style>
 </head>
 
-<body style="font-weight: 600;">
-    <?php
+<body>
+<?php
 	        $data_admin=Session::get('data_admin');
 	
 	        ?>
-    <div ">
-        <ul class=" nav nav-tabs row" style="text-align: center;    ">
-        <li class="nav-item col-lg-2">
-            <a class="nav-link  " href="{{ route('movieAdmin') }}">Trang chủ</a>
-        </li>
-        <li class="nav-item col-lg-8">
+    <div>
+        <ul class="nav nav-tabs row">
+            <li class="nav-item col-md-5">
+                <a class="nav-link  " href="{{ route('movieAdmin') }}">Trang chủ</a>
+            </li>
 
-            <a class="nav-link" style="color: red;text-align: center;">Xin chào {{$data_admin->name}} </a>
-        </li>
-
-        <li class="nav-item  col-lg-2 " style="text-align: center;">
-            <a class="nav-link" href="{{URL::to('/logout')}}">Đăng Xuất</a>
-        </li>
+            <li class="nav-item  col-md-6 d-flex" style="">
+            <a >{{$data_admin->name}}</a>
+                <a class="nav-link" href="{{URL::to('/logout')}}">Đăng Xuất</a>
+            </li>
         </ul>
-        <ul class="nav nav-tabs row" style="text-align: center;">
-            <li class="nav-item col-md-3">
+        <ul class="nav nav-tabs row">
+            <li class="nav-item col-md-2">
                 <a class="nav-link  " href="{{ route('movieCategory') }}">Quản Lý Loại Phim</a>
             </li>
-            <li class="nav-item col-md-3">
+            <li class="nav-item col-md-2">
                 <a class="nav-link " href="">Quản Lý Phim</a>
             </li>
-            <li class="nav-item col-md-3">
+            <li class="nav-item col-md-2">
                 <a class="nav-link " href="{{ route('movieUser') }}"> Quản Lí Người Dùng</a>
             </li>
-            <li class="nav-item col-md-3">
+            <li class="nav-item col-md-2">
                 <a class="nav-link " href="{{ route('movieTicket') }}"> Quản Lí Vé</a>
             </li>
 

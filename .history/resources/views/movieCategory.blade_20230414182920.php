@@ -5,13 +5,6 @@
         <div class="panel-heading">
             <h2 class="text-center">Quản Lý Loại Phim</h2>
         </div>
-        <?php
-            $message =Session::get('message');
-            if($message){
-                echo $message;
-                Session::put('message',null);
-            }
-            ?>
         <div class="panel-body">
             <div class="row">
                 <div class="col-lg-6">
@@ -30,25 +23,21 @@
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th width="70px">ID Loại</th>
-                        <th>Tên Thể Loại</th>
+                        <th width="50px">STT</th>
+                        <th>Tên Loại</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($all_Category as $key => $category)
                     <tr>
-                        <td>{{$category->IDTheLoai}} </td>
-                        <td>{{$category->TenTheLoai}} </td>
+                        <td> </td>
+                        <td> </td>
                         <td width="50px">
-                            <a href="{{URL::to('/edit-Category/'.$category->IDTheLoai)}}"><button
-                                    class="btn btn-warning">Sửa</button></a>
+                            <a href=" "><button class="btn btn-warning">Sửa</button></a>
                         </td>
                         <td width="50px">
-                            <a href="{{URL::to('/delete-Category/'.$category->IDTheLoai)}}"><button
-                                    class="btn btn-danger">Xoá</button></a>
+                            <button class="btn btn-danger">Xoá</button>
                         </td>
                     </tr>
-                    @endforeach
                 </tbody>
             </table>
         </div>

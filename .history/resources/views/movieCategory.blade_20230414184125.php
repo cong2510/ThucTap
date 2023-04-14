@@ -39,12 +39,12 @@
                     <tr>
                         <td>{{$category->IDTheLoai}} </td>
                         <td>{{$category->TenTheLoai}} </td>
-                        <td width="50px">
-                            <a href="{{URL::to('/edit-Category/'.$category->IDTheLoai)}}"><button
+                        <td>
+                            <a href="{{URL::to('/edit-User/'.$user->IDKH)}}"><button
                                     class="btn btn-warning">Sửa</button></a>
                         </td>
-                        <td width="50px">
-                            <a href="{{URL::to('/delete-Category/'.$category->IDTheLoai)}}"><button
+                        <td>
+                            <a href="{{URL::to('/delete-User/'.$user->IDKH)}}"><button
                                     class="btn btn-danger">Xoá</button></a>
                         </td>
                     </tr>
