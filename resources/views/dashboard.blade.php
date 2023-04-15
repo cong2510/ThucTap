@@ -25,7 +25,7 @@
 	        $data_admin=Session::get('data_admin');
 	
 	        ?>
-    <div ">
+    <div>
         <ul class=" nav nav-tabs row" style="text-align: center;    ">
         <li class="nav-item col-lg-2">
             <a class="nav-link  " href="{{ route('movieAdmin') }}">Trang chủ</a>

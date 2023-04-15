@@ -1,3 +1,4 @@
+
 <div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block"
@@ -48,13 +49,30 @@
                         </a>
                     </li> --}}
                     <li class="nav-item">
+                        <?php
+                        $data_admin=Session::get('data_admin');
+                       
+                        ?>
+                       
+                        @if($data_admin=="")
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-dangnhap" data-bs-toggle="modal"
                             data-bs-target="#ModalForm"
                             style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
                             ĐĂNG NHẬP
                         </button>
+                    </li>
+                        @else
+                        <li class="nav-item"> 
+                        <a class="nav-link" style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
+                        Xin chào {{$data_admin->TenKH}} </a>
+                        <a href="{{URL::to('/logout')}}"  class="btn btn-dangnhap" 
+                            style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
+                            ĐĂNG XUẤT
+                        </a>  
+                        @endif
                         <x-login />
+                       
                     </li>
                 </ul>
             </div>

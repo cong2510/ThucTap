@@ -4,6 +4,7 @@ use App\Http\Controllers\MovieController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -71,3 +72,8 @@ Route::post('/save-Category', [CategoryController::class, 'save_Category']);
 Route::get('/edit-Category/{IDTheLoai}', [CategoryController::class, 'edit_Category']);
 Route::get('/delete-Category/{IDTheLoai}', [CategoryController::class, 'delete_Category']);
 Route::post('/update-Category', [CategoryController::class, 'update_Category']);
+
+//Login
+Route::get('/trang-chu', [LoginController::class, 'trang_chu']);
+Route::post('/index', [LoginController::class, 'dang_nhap']);
+Route::get('/logout', [LoginController::class, 'logout']);
