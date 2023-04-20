@@ -63,7 +63,7 @@
                         @else
                         <li class="nav-item"> 
                         <a class="nav-link" style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
-                        Xin chào {{$data_admin->TenKH}} </a>
+                        Xin chào {{$data_admin->TenKH??""}} </a>
                         <a href="{{URL::to('/logout')}}"  class="btn btn-dangnhap" 
                             style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
                             ĐĂNG XUẤT

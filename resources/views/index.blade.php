@@ -39,7 +39,7 @@
                                 <swiper-slide class="product-slide">
                                     <div class="card border-0" style="background-color: transparent !important;">
                                         <a href="{{ route('movie', $movie['IDPhim']) }}" title="">
-                                            <img src="images/{{ $movie['HinhAnh'] }}" alt="..." />
+                                            <img src="{{ URL::to('images/'.$movie['HinhAnh']) }}" alt="..." />
                                         </a>
                                         <div class="card-body" style="height:120px">
                                             <div class="text-center">
