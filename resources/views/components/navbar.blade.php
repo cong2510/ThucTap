@@ -51,9 +51,7 @@
                     <li class="nav-item">
                         <?php
                         $data_admin=Session::get('data_admin');
-                       
                         ?>
-                       
                         @if($data_admin=="")
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-dangnhap" data-bs-toggle="modal"

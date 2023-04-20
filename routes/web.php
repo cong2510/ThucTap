@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ChairController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,6 +53,12 @@ Route::get('/movieTicket', function () {
 Route::get('/movieAddTicket', function () {
     return view('movieAddTicket');
 })->name('movieAddTicket');
+Route::get('/chair', function () {
+    return view('chair');
+})->name('chair');
+Route::get('/movieAddTicket', function () {
+    return view('movieAddTicket');
+})->name('movieAddTicket');
 Route::get('/movieLoginAdmin', function () {
     return view('movieLoginAdmin');
 })->name('movieLoginAdmin');
@@ -77,3 +84,11 @@ Route::post('/update-Category', [CategoryController::class, 'update_Category']);
 Route::get('/trang-chu', [LoginController::class, 'trang_chu']);
 Route::post('/index', [LoginController::class, 'dang_nhap']);
 Route::get('/logout', [LoginController::class, 'logout']);
+
+//Chair
+Route::get('/chair', [ChairController::class, 'all_Chair'])->name('chair');
+Route::get('/add-Chair', [ChairController::class, 'add_Chair']);
+Route::get('/all-Chair', [ChairController::class, 'all_Chair']);
+Route::post('/save-Chair', [ChairController::class, 'save_Chair']);
+
+Route::get('/delete-Chair/{IDGhe}', [ChairController::class, 'delete_Chair']);
