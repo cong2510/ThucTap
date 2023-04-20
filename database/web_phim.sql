@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 28, 2023 at 04:20 PM
+-- Generation Time: Apr 20, 2023 at 09:39 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -48,10 +48,38 @@ CREATE TABLE IF NOT EXISTS `dondatve` (
 DROP TABLE IF EXISTS `ghe`;
 CREATE TABLE IF NOT EXISTS `ghe` (
   `IDGhe` int(11) NOT NULL AUTO_INCREMENT,
+  `IDPhongChieu` int(11) NOT NULL,
   `HangGhe` varchar(45) NOT NULL,
   `SoGhe` int(5) NOT NULL,
-  PRIMARY KEY (`IDGhe`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`IDGhe`),
+  KEY `IDPhong` (`IDPhongChieu`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ghe`
+--
+
+INSERT INTO `ghe` (`IDGhe`, `IDPhongChieu`, `HangGhe`, `SoGhe`) VALUES
+(1, 2, 'A', 1),
+(2, 2, 'A', 2),
+(3, 2, 'A', 3),
+(4, 2, 'A', 4),
+(5, 2, 'A', 5),
+(6, 2, 'B', 1),
+(7, 2, 'B', 2),
+(8, 2, 'B', 3),
+(9, 2, 'B', 4),
+(10, 2, 'B', 5),
+(11, 2, 'C', 1),
+(12, 2, 'C', 2),
+(13, 2, 'C', 3),
+(14, 2, 'C', 4),
+(15, 2, 'C', 5),
+(16, 2, 'D', 1),
+(17, 2, 'D', 2),
+(18, 2, 'D', 3),
+(19, 2, 'D', 4),
+(20, 2, 'D', 5);
 
 -- --------------------------------------------------------
 
@@ -97,7 +125,7 @@ INSERT INTO `phim` (`IDPhim`, `IDTheLoai`, `TenPhim`, `ThoiLuong`, `KhoiChieu`, 
 (2, 1, 'HOW TO SAVE THE IMMORTAL', '76 phút', '2023-03-14', 'Hành trình đi tìm tình yêu cùa hoàng tử đẹp trai và bất tử Koschey,nhưng vẫn không ai đồng ý mặc dù anh đã nhiều lần bắt cóc và biến nhiều công chúa thành ếch.Sau đó anh gặp nữ anh hùng Varvara, liệu sự chân thành của anh ta có chinh phục được cô ấy ?', 'cuocchienbattu.jpg', 'howtosaveimmortal.mp4'),
 (3, 1, 'DEMON SLAYER : TO THE SWORDSMITH VILLAGE', '110 phút', '2023-03-02', 'Sau trận chiến khốc liệt với anh em quỷ Thượng Huyền Lục Gyuutarou và Daki tại Phố Đèn Đỏ, Tanjiro và các kiếm sĩ diệt quỷ đều bị thương nặng, thanh gươm của Tanjiro cũng bị hư hỏng nặng và cậu cần một thanh gươm mới để tiếp tục làm nhiệm vụ...', 'demonslayer.jpg', 'demonslayer.mp4'),
 (4, 4, 'THE ONE', '96 phút', '2023-03-11', 'Cặp vợ chồng mới cưới Larisa và Vladimir trở về nhà từ tuần trăng mật ở Blagoveshchensk và bị va chạm máy bay, Larisa phải vật lộn với cái đói cái lạnh và động vật hoang dã săn mồi. Liệu Larisa có tìm được vị hôn phu và cùng sống sót trở về ?', 'songsot.jpg', 'theone.mp4'),
-(5, 4, 'SOULMATE', '124 phút', '2023-03-16', 'Mi So và Ha Eun trong một mối quan hệ chồng chéo chất chứa những hạnh phúc, rung động và biệt ly. Từ giây phút gặp nhau , hai cô gái đã hình thành sợi dây liên kết đặc biệt nhưng mối quan hệ của họ rạn nứt khi một chàng trai xuất hiện...', 'soulmate.jpg', 'soulmate.mp4'),
+(5, 4, 'SOULMATE', '124 phút', '2023-04-01', 'Mi So và Ha Eun trong một mối quan hệ chồng chéo chất chứa những hạnh phúc, rung động và biệt ly. Từ giây phút gặp nhau , hai cô gái đã hình thành sợi dây liên kết đặc biệt nhưng mối quan hệ của họ rạn nứt khi một chàng trai xuất hiện...', 'soulmate.jpg', 'soulmate.mp4'),
 (6, 2, 'THE COMUNION GIRL', '99 phút', '2023-03-10', 'Dựa trên truyền thuyết đô thị rùng rợn về một hồn ma cô gái mặc phục trang cho buổi Rước lễ lần đầu. Sara và bạn thân Rebe phải đối mặt với sự truy đuổi ác nghiệt từ một linh hồn không tên, cả hai sẽ phải làm gì để bảo vệ bản thân và gia đình...?', 'vonghon.jpg', 'vonghon.mp4'),
 (7, 6, 'NHỮNG ĐỨA TRẺ TRONG SƯƠNG', '93 phút', '2023-03-04', 'Di, một cô gái trẻ nhiệt huyết đến từ cộng đồng người Mông bị mắc kẹt giữa truyền thống \"kéo vợ\" và mong muốn được tiếp tục sống thời thơ ấu và đến trường đi học , liệu với trái tim trong sáng ấy , Di sẽ đối diện với xã hội ấy như thế nào...?', 'nhungduatretrongsuong.jpg', 'nhungduatretrrongsuong.mp4'),
 (8, 4, 'MY BEAUTIFUL MAN MOVIE: SPECIAL EDITION', '98 phút', '2023-04-13', 'Hira, 17 tuổi, cố gắng ẩn mình ở trường, không bao giờ muốn phơi bày tật nói lắp của mình với các bạn cùng lớp. Anh ấy nhìn thế giới qua ống kính máy ảnh của mình, cho đến một ngày Kiyoi Sou bước qua cửa lớp...', 'mybeautifulman.jpg', 'thebeautifulman.mp4');
@@ -112,11 +140,21 @@ DROP TABLE IF EXISTS `phongchieu`;
 CREATE TABLE IF NOT EXISTS `phongchieu` (
   `IDPhongChieu` int(11) NOT NULL AUTO_INCREMENT,
   `IDRap` int(11) NOT NULL,
-  `IDGhe` int(11) NOT NULL,
   PRIMARY KEY (`IDPhongChieu`),
-  KEY `IDGhe` (`IDGhe`),
   KEY `IDRap` (`IDRap`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phongchieu`
+--
+
+INSERT INTO `phongchieu` (`IDPhongChieu`, `IDRap`) VALUES
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 2),
+(6, 2),
+(7, 2);
 
 -- --------------------------------------------------------
 
@@ -129,7 +167,15 @@ CREATE TABLE IF NOT EXISTS `rapchieuphim` (
   `IDRap` int(11) NOT NULL AUTO_INCREMENT,
   `TenRap` varchar(45) NOT NULL,
   PRIMARY KEY (`IDRap`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `rapchieuphim`
+--
+
+INSERT INTO `rapchieuphim` (`IDRap`, `TenRap`) VALUES
+(1, 'PhimMoi'),
+(2, 'VuiGhe');
 
 -- --------------------------------------------------------
 
@@ -142,10 +188,23 @@ CREATE TABLE IF NOT EXISTS `suatchieu` (
   `IDSuatChieu` int(11) NOT NULL AUTO_INCREMENT,
   `IDPhim` int(11) NOT NULL,
   `IDPhongChieu` int(11) NOT NULL,
+  `NgayChieu` date NOT NULL,
+  `GioChieu` time NOT NULL,
   PRIMARY KEY (`IDSuatChieu`),
   KEY `IDPhim` (`IDPhim`),
   KEY `IDPhongChieu` (`IDPhongChieu`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `suatchieu`
+--
+
+INSERT INTO `suatchieu` (`IDSuatChieu`, `IDPhim`, `IDPhongChieu`, `NgayChieu`, `GioChieu`) VALUES
+(1, 1, 2, '2023-04-18', '23:00:00'),
+(2, 1, 2, '2023-04-14', '21:00:00'),
+(3, 1, 3, '2023-04-13', '12:00:00'),
+(4, 1, 2, '2023-04-30', '06:00:00'),
+(5, 1, 2, '2023-04-19', '23:00:00');
 
 -- --------------------------------------------------------
 
@@ -204,6 +263,12 @@ ALTER TABLE `dondatve`
   ADD CONSTRAINT `dondatve_ibfk_1` FOREIGN KEY (`IDKhachHang`) REFERENCES `khachhang` (`IDKH`);
 
 --
+-- Constraints for table `ghe`
+--
+ALTER TABLE `ghe`
+  ADD CONSTRAINT `ghe_ibfk_1` FOREIGN KEY (`IDPhongChieu`) REFERENCES `phongchieu` (`IDPhongChieu`);
+
+--
 -- Constraints for table `phim`
 --
 ALTER TABLE `phim`
@@ -213,7 +278,6 @@ ALTER TABLE `phim`
 -- Constraints for table `phongchieu`
 --
 ALTER TABLE `phongchieu`
-  ADD CONSTRAINT `phongchieu_ibfk_1` FOREIGN KEY (`IDGhe`) REFERENCES `ghe` (`IDGhe`),
   ADD CONSTRAINT `phongchieu_ibfk_2` FOREIGN KEY (`IDRap`) REFERENCES `rapchieuphim` (`IDRap`);
 
 --

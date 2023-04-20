@@ -38,12 +38,12 @@
                             @if ($movie['KhoiChieu'] <= Carbon\Carbon::today())
                                 <swiper-slide class="product-slide">
                                     <div class="card border-0" style="background-color: transparent !important;">
-                                        <a href="{{ route('movie', $movie['IDPhim']) }}" title="">
+                                        <a href="{{ route('moviedetail', $movie['IDPhim']) }}" title="">
                                             <img src="images/{{ $movie['Img'] }}" alt="..." />
                                         </a>
                                         <div class="card-body" style="height:120px">
                                             <div class="text-center">
-                                                <a href="{{ route('movie', $movie['IDPhim']) }}" class="product-name">
+                                                <a href="{{ route('moviedetail', $movie['IDPhim']) }}" class="product-name">
                                                     {{ $movie['TenPhim'] }}
                                                 </a>
                                             </div>
@@ -54,7 +54,7 @@
                                                     <form method="get" action="" class="form-muave">
                                                         <button class="btn btn-muave mt-auto"
                                                             style="width: 100%;border: 0;background: #66CC00;">
-                                                            <a href="{{ route('movie', $movie['IDPhim']) }}"
+                                                            <a href="{{ route('moviedetail', $movie['IDPhim']) }}"
                                                                 style="color: white;font-weight: bold;text-decoration: none"><i
                                                                     class="fa fa-ticket"></i> MUA VÉ</a>
                                                         </button>
@@ -77,12 +77,12 @@
                             @if ($movie['KhoiChieu'] > Carbon\Carbon::today())
                                 <swiper-slide>
                                     <div class="card border-0" style="background-color: transparent !important;">
-                                        <a href="{{ route('movie', $movie['IDPhim']) }}" title="">
+                                        <a href="{{ route('moviedetail', $movie['IDPhim']) }}" title="">
                                             <img src="images/{{ $movie['Img'] }}" alt="..." />
                                         </a>
                                         <div class="card-body" style="height:120px">
                                             <div class="text-center">
-                                                <a href="{{ route('movie', $movie['IDPhim']) }}" class="product-name">
+                                                <a href="{{ route('moviedetail', $movie['IDPhim']) }}" class="product-name">
                                                     {{ $movie['TenPhim'] }}
                                                 </a>
                                             </div>
@@ -93,7 +93,7 @@
                                                     <form method="get" action="" class="form-muave">
                                                         <button class="btn btn-muave mt-auto"
                                                             style="width: 100%;border: 0;background: #66CC00;">
-                                                            <a href="{{ route('movie', $movie['IDPhim']) }}"
+                                                            <a href="{{ route('moviedetail', $movie['IDPhim']) }}"
                                                                 style="color: white;font-weight: bold;text-decoration: none"><i
                                                                     class="fa fa-ticket"></i> MUA VÉ</a>
                                                         </button>
