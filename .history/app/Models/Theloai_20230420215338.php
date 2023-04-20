@@ -10,6 +10,5 @@ class Theloai extends Model
     use HasFactory;
     protected $table = 'theloai';
     protected $primaryKey = "IDTheLoai";
-    protected $fillable = ['TenTheLoai'];
 
 }

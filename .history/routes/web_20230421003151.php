@@ -90,7 +90,7 @@ Route::get('/movieMovie', [PhimController::class, 'all_Movie'])->name('movieMovi
 Route::get('/add-Movie', [PhimController::class, 'add_Movie']);
 Route::get('/all-Movie', [PhimController::class, 'all_Movie']);
 Route::post('/save-Movie', [PhimController::class, 'save_Movie']);
- 
+Route::get('/add', [PhimController::class, 'add']);
 //Chair
 Route::get('/chair', [ChairController::class, 'all_Chair'])->name('chair');
 Route::get('/add-Chair', [ChairController::class, 'add_Chair']);
