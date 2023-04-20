@@ -51,7 +51,7 @@
         </div>
         <div class="row">
             <div class="movie-picture col-4">
-                <img src="/images/{{ $movie['Img'] }}"alt="">
+                <img src="/images/{{ $movie['HinhAnh'] }}"alt="">
             </div>
             <div class="movie-content col-8">
                 <div class="movie-name">
