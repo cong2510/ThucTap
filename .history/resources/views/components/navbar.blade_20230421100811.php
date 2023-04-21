@@ -59,7 +59,7 @@
                             ĐĂNG NHẬP
                         </button>
                     </li>
-                    @else <li class="nav-item">
+                    <<<<<<< HEAD @else <li class="nav-item">
                         <a class="nav-link"
                             style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
                             Xin chào </a>
@@ -67,15 +67,16 @@
                             <a class="nav-link"
                                 style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
                                 Xin chào </a>
-                            <a href="{{URL::to('/logout')}}" class="btn btn-dangnhap"
-                                ed87dfc7375bcafdd0d6a89d3e233bcbca9d1293 style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px
+                            <a href="{{URL::to('/logout')}}" class="btn btn-dangnhap">>>>>>>
+                                ed87dfc7375bcafdd0d6a89d3e233bcbca9d1293
+                                style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px
                                 12px;margin-top: 5px;background: #66CC00">
                                 ĐĂNG XUẤT
                             </a>
                             @endif
                             <x-login />
 
-                    </li>
+                            </li>
                 </ul>
             </div>
         </div>

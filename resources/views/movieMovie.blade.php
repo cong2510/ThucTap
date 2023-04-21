@@ -47,7 +47,7 @@
                         <td>{{$movie->TenTheLoai}} </td>
                         <td>{{$movie->ThoiLuong}} </td>
                         <td>{{$movie->Mota}} </td>
-                        <td><img src="/uploads/{{$movie->HinhAnh}}" alt=""> </td>
+                        <td><img src="{{ URL::to('images/'.$movie->HinhAnh)}}" alt=""> </td>
 
                     </tr>
                     @endforeach
