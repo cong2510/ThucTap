@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ChairController;
 use App\Http\Controllers\PhimController;
+use App\Http\Controllers\RapController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -63,6 +64,9 @@ Route::get('/movieAddTicket', function () {
 Route::get('/movieLoginAdmin', function () {
     return view('movieLoginAdmin');
 })->name('movieLoginAdmin');
+Route::get('/rap', function () {
+    return view('rap');
+})->name('rap');
 
 //User
 Route::get('/movieUser', [UserController::class, 'all_User'])->name('movieUser');
@@ -96,5 +100,13 @@ Route::get('/chair', [ChairController::class, 'all_Chair'])->name('chair');
 Route::get('/add-Chair', [ChairController::class, 'add_Chair']);
 Route::get('/all-Chair', [ChairController::class, 'all_Chair']);
 Route::post('/save-Chair', [ChairController::class, 'save_Chair']);
-
 Route::get('/delete-Chair/{IDGhe}', [ChairController::class, 'delete_Chair']);
+
+//Rạp
+Route::get('/rap', [RapController::class, 'all_Rap'])->name('rap');
+Route::get('/add-Rap', [RapController::class, 'add_Rap']);
+Route::get('/all-Rap', [RapController::class, 'all_Rap']);
+Route::post('/save-Rap', [RapController::class, 'save_Rap']);
+// Route::get('/edit-Category/{IDTheLoai}', [RapController::class, 'edit_Category']);
+// Route::get('/delete-Category/{IDTheLoai}', [RapController::class, 'delete_Category']);
+// Route::post('/update-Category', [RapController::class, 'update_Category']);

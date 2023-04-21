@@ -28,7 +28,6 @@ class ChairController extends Controller
         return Redirect::to('chair');
     }
     
-   
     public function delete_Chair($IDGhe){
         DB::table('ghe')->where('IDGhe',$IDGhe)->delete();
         Session::put('message','Xóa thành công');
