@@ -1,3 +1,4 @@
+
 <div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block"
@@ -59,18 +60,17 @@
                             ĐĂNG NHẬP
                         </button>
                     </li>
-                    @else
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
-                            Xin chào </a>
-                        <a href="{{URL::to('/logout')}}" class="btn btn-dangnhap"
+                        @else
+                        <li class="nav-item"> 
+                        <a class="nav-link" style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
+                        Xin chào {{$data_admin->TenKH}} </a>
+                        <a href="{{URL::to('/logout')}}"  class="btn btn-dangnhap" 
                             style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 6px 12px;margin-top: 5px;background: #66CC00">
                             ĐĂNG XUẤT
-                        </a>
+                        </a>  
                         @endif
                         <x-login />
-
+                       
                     </li>
                 </ul>
             </div>
