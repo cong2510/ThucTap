@@ -55,6 +55,9 @@
             <li class="nav-item col-md-3">
                 <a class="nav-link " href="{{ route('chair') }}"> Quản Lí Ghế</a>
             </li>
+            <li class="nav-item col-md-3">
+                <a class="nav-link " href="{{ route('rap') }}"> Quản Lí Rạp</a>
+            </li>
 
         </ul>
     </div>
