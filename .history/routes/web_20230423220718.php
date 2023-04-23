@@ -7,8 +7,6 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ChairController;
 use App\Http\Controllers\PhimController;
-use App\Http\Controllers\RapController;
-use App\Http\Controllers\SuatChieuController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -103,17 +101,5 @@ Route::get('/chair', [ChairController::class, 'all_Chair'])->name('chair');
 Route::get('/add-Chair', [ChairController::class, 'add_Chair']);
 Route::get('/all-Chair', [ChairController::class, 'all_Chair']);
 Route::post('/save-Chair', [ChairController::class, 'save_Chair']);
+
 Route::get('/delete-Chair/{IDGhe}', [ChairController::class, 'delete_Chair']);
-//Rạp
-Route::get('/rap', [RapController::class, 'all_Rap'])->name('rap');
-Route::get('/add-Rap', [RapController::class, 'add_Rap']);
-Route::get('/all-Rap', [RapController::class, 'all_Rap']);
-Route::post('/save-Rap', [RapController::class, 'save_Rap']);
-//suatchieu
-Route::get('/suatchieu', [SuatChieuController::class, 'all_SuatChieu'])->name('suatchieu');
-Route::get('/add-SuatChieu', [SuatChieuController::class, 'add_SuatChieu']);
-Route::get('/all-SuatChieu', [SuatChieuController::class, 'all_SuatChieu']);
-Route::post('/save-SuatChieu', [SuatChieuController::class, 'save_SuatChieu']);
-Route::get('/edit-SuatChieu/{IDSuatChieu}', [SuatChieuController::class, 'edit_SuatChieu']);
-Route::get('/delete-SuatChieu/{IDSuatChieu}', [SuatChieuController::class, 'delete_SuatChieu']);
-Route::post('/update-SuatChieu', [SuatChieuController::class, 'update_SuatChieu']);

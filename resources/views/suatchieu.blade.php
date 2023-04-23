@@ -3,7 +3,7 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h2 class="text-center">Quản Lý Phim</h2>
+            <h2 class="text-center">Quản Lý Suất Chiếu</h2>
         </div>
         <?php
             $message =Session::get('message');
@@ -15,8 +15,8 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-lg-6">
-                    <a href="{{URL::to('add-Movie')}}">
-                        <button class="btn btn-success" style="margin-bottom: 15px;">Thêm Phim</button>
+                    <a href="{{URL::to('add-SuatChieu') }} ">
+                        <button class="btn btn-success" style="margin-bottom: 15px;">Thêm Suất Chiếu</button>
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -30,32 +30,25 @@
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th>ID Phim</th>
-                        <th>Tên Phim</th>
-                        <th>Thể Loại</th>
-                        <th>Thời Lượng</th>
-                        <th>Mô Tả</th>
-                        <th>Hình Ảnh</th>
-
+                        <th>ID Suất Chiếu</th>
+                        <th>Thời gian</th>
                     </tr>
                 </thead>
-                <tbody style="text-align: center;">
-                    @foreach($all_Movie as $key => $movie)
+                <tbody>
+                    @foreach($all_SuatChieu as $key => $SuatChieu)
                     <tr>
-                        <td>{{$movie->IDPhim}} </td>
-                        <td>{{$movie->TenPhim}} </td>
-                        <td>{{$movie->TenTheLoai}} </td>
-                        <td>{{$movie->ThoiLuong}} </td>
-                        <td>{{$movie->Mota}} </td>
-                        <td><img style="max-width: 300px; height: auto;" src="{{ URL::to('images/'.$movie->HinhAnh)}}"
-                                alt=""> </td>
+                        <td>{{$SuatChieu->IDSuatChieu}} </td>
+                        <td>{{$SuatChieu->ThoiGian}} </td>
                         <td width="50px">
-                            <a href="  "><button class="btn btn-warning">Sửa</button></a>
+                            <a href="{{URL::to('/edit-SuatChieu/'.$SuatChieu->IDSuatChieu)}}"><button
+                                    class="btn btn-warning">Sửa</button></a>
                         </td>
                         <td width="50px">
-                            <a href=" "><button class="btn btn-danger">Xoá</button></a>
+                            <a href="{{URL::to('/delete-SuatChieu/'.$SuatChieu->IDSuatChieu)}}"><button
+                                    class="btn btn-danger">Xoá</button></a>
                         </td>
                     </tr>
+
                     @endforeach
                 </tbody>
             </table>

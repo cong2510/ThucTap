@@ -39,7 +39,7 @@
 
                     </tr>
                 </thead>
-                <tbody style="text-align: center;">
+                <tbody>
                     @foreach($all_Movie as $key => $movie)
                     <tr>
                         <td>{{$movie->IDPhim}} </td>
@@ -49,12 +49,7 @@
                         <td>{{$movie->Mota}} </td>
                         <td><img style="max-width: 300px; height: auto;" src="{{ URL::to('images/'.$movie->HinhAnh)}}"
                                 alt=""> </td>
-                        <td width="50px">
-                            <a href="  "><button class="btn btn-warning">Sửa</button></a>
-                        </td>
-                        <td width="50px">
-                            <a href=" "><button class="btn btn-danger">Xoá</button></a>
-                        </td>
+
                     </tr>
                     @endforeach
                 </tbody>

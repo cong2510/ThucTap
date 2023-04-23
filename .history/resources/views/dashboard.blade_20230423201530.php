@@ -32,7 +32,7 @@
             </li>
             <li class="nav-item col-lg-8">
 
-                <a class="nav-link" style="color: red;text-align: center;">Xin chào {{$data_admin->name}} </a>
+                <a class="nav-link" style="color: red;text-align: center;">Xin chào </a>
             </li>
 
             <li class="nav-item  col-lg-2 " style="text-align: center;">
@@ -58,9 +58,7 @@
             <li class="nav-item col-md-3">
                 <a class="nav-link " href="{{ route('rap') }}"> Quản Lí Rạp</a>
             </li>
-            <li class="nav-item col-md-3">
-                <a class="nav-link " href="{{ route('suatchieu') }}"> Quản Lí Suất Chiếu</a>
-            </li>
+
         </ul>
     </div>
     @yield('admin')
