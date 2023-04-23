@@ -3,7 +3,7 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h2 class="text-center">Quản Lý Loại Phim</h2>
+            <h2 class="text-center">Quản Lý Phòng Chiếu</h2>
         </div>
         <?php
             $message =Session::get('message');
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <a href="{{URL::to('add-Category') }}">
-                        <button class="btn btn-success" style="margin-bottom: 15px;">Thêm Loại Phim</button>
+                        <button class="btn btn-success" style="margin-bottom: 15px;">Thêm Phòng Chiếu</button>
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -27,11 +27,11 @@
                     </form>
                 </div>
             </div>
-            <table class="table table-bordered table-hover" style="text-align: center;">
+            <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th width="70px">ID Loại</th>
-                        <th>Tên Thể Loại</th>
+                        <th width="70px">ID Phòng Chiếu</th>
+                        <th>Tên Phòng</th>
                     </tr>
                 </thead>
                 <tbody>

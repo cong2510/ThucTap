@@ -3,7 +3,7 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h2 class="text-center">Quản Lý Loại Phim</h2>
+            <h2 class="text-center">Quản Lý Phòng Chiếu</h2>
         </div>
         <?php
             $message =Session::get('message');
@@ -15,8 +15,8 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-lg-6">
-                    <a href="{{URL::to('add-Category') }}">
-                        <button class="btn btn-success" style="margin-bottom: 15px;">Thêm Loại Phim</button>
+                    <a href="{{URL::to('add-Room') }}">
+                        <button class="btn btn-success" style="margin-bottom: 15px;">Thêm Phòng Chiếu</button>
                     </a>
                 </div>
                 <div class="col-lg-6">
@@ -27,24 +27,24 @@
                     </form>
                 </div>
             </div>
-            <table class="table table-bordered table-hover" style="text-align: center;">
+            <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th width="70px">ID Loại</th>
-                        <th>Tên Thể Loại</th>
+                        <th>ID Phòng Chiếu</th>
+                        <th>Tên Phòng</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($all_Category as $key => $category)
+                    @foreach($all_Room as $key => $Room)
                     <tr>
-                        <td>{{$category->IDTheLoai}} </td>
-                        <td>{{$category->TenTheLoai}} </td>
+                        <td>{{$Room->IDPhongChieu}} </td>
+                        <td>{{$Room->TenPhong}} </td>
                         <td width="50px">
-                            <a href="{{URL::to('/edit-Category/'.$category->IDTheLoai)}}"><button
+                            <a href="{{URL::to('/edit-Room/'.$Room->IDPhongChieu)}}"><button
                                     class="btn btn-warning">Sửa</button></a>
                         </td>
                         <td width="50px">
-                            <a href="{{URL::to('/delete-Category/'.$category->IDTheLoai)}}"><button
+                            <a href="{{URL::to('/delete-Room/'.$Room->IDPhongChieu)}}"><button
                                     class="btn btn-danger">Xoá</button></a>
                         </td>
                     </tr>

@@ -27,7 +27,7 @@
                     </form>
                 </div>
             </div>
-            <table class="table table-bordered table-hover" style="text-align: center;">
+            <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
                         <th>ID Rạp</th>
@@ -35,12 +35,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($all_Rap as $key => $rap)
+                @foreach($all_Rap as $key => $rap)
                     <tr>
                         <td>{{$rap->IDRap}}</td>
                         <td>{{$rap->TenRap}}</td>
                     </tr>
-                    @endforeach
+                @endforeach
                 </tbody>
             </table>
         </div>

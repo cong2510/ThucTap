@@ -9,7 +9,6 @@ use App\Http\Controllers\ChairController;
 use App\Http\Controllers\PhimController;
 use App\Http\Controllers\RapController;
 use App\Http\Controllers\SuatChieuController;
-use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
 /*
