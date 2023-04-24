@@ -10,17 +10,17 @@ use Session;
 
 use Illuminate\Support\Facades\Redirect;
 session_start();
-class PhimController extends Controller
+class TicketController extends Controller
 {
  
-    public function add_Movie(){
+    public function add_Ticket(){
         $Theloai= Theloai::all();
-        return view('/admin.movieAddMovie',compact('Theloai'));
+        return view('/movieAddTicket',compact('Theloai'));
     }
-    public function all_Movie(){
-        $all_Movie=DB::table('phim')->get();
-        $manager_Movie=view('/movieMovie')->with('/movieMovie',$all_Movie);
-        return view('movieMovie')->with('all_Movie',$all_Movie);
+    public function all_Ticket(){
+        $all_Ticket=DB::table('phim')->get();
+        $manager_Ticket=view('/movieTicket')->with('/movieTicket',$all_Ticket);
+        return view('movieTicket')->with('all_Ticket',$all_Ticket);
     }
     public function save_Movie(Request $request){
         if($request ->has('HinhAnh')){

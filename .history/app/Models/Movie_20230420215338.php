@@ -10,5 +10,4 @@ class Movie extends Model
     use HasFactory;
     protected $table = 'phim';
     protected $primaryKey = "IDPhim";
-    protected $fillable = ['TenPhim'];
 }

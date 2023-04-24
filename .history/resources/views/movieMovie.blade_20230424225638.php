@@ -47,7 +47,7 @@
                         <td>{{$movie->TenPhim}} </td>
                         <td>{{$movie->TenTheLoai}} </td>
                         <td>{{$movie->ThoiLuong}} </td>
-                        <td>{{$movie->NgayKhoiChieu}} </td>
+                        <td> </td>
                         <td>{{$movie->Mota}} </td>
                         <td><img style="max-width: 300px; height: auto;" src="{{ URL::to('images/'.$movie->HinhAnh)}}"
                                 alt=""> </td>

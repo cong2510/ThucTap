@@ -14,29 +14,21 @@
                     <input required="true" type="text" class="form-control" id="title" name="title" value=" ">
                 </div>
                 <div class="form-group">
-                    <label for="name">Tên Phim:</label>
-                    <select name="TenPhim" id="" class="form-control">
-                        <option value=" ">Chọn phim</option>
-                        @foreach ( $Movie as $data)
-                        <option value=" ">{{ $data->TenPhim }}</option>
-                        @endforeach
-
-                    </select>
+                    <label for="name">Tên phim:</label>
+                    <input type="text" name="TenPhim" value=" " hidden="true">
+                    <input required="true" type="text" class="form-control" id="title" name="title" value=" ">
                 </div>
                 <div class="form-group">
-                    <label for="name">Tên Rạp:</label>
-                    @foreach ( $Rap as $data)
-                    <input type="checkbox" id="title" name="TenRap" value="{{ $data->TenRap }} ">
-                    <label>{{ $data->TenRap }}</label>
-
-                    @endforeach
+                    <label for="name">Tên rạp:</label>
+                    <input type="text" name="TenRap" value=" " hidden="true">
+                    <input required="true" type="text" class="form-control" id="title" name="title" value=" ">
                 </div>
 
                 <div class="form-group">
                     <label for="name">Tên Thể Loại:</label>
                     <select name="TenTheLoai" id="" class="form-control">
                         <option value=" ">Chọn thể loại</option>
-                        @foreach ( $Theloai as $data)
+                        @foreach ( $theloai as $data)
                         <option value=" ">{{ $data->TenTheLoai }}</option>
                         @endforeach
 
@@ -44,11 +36,8 @@
                 </div>
                 <div class="form-group">
                     <label for="name">Xuất chiếu:</label>
-                    @foreach ( $Suatchieu as $data)
-                    <input type="checkbox" id="title" name="ThoiGian" value="{{ $data->ThoiGian }} ">
-                    <label>{{ $data->ThoiGian }}</label>
-
-                    @endforeach
+                    <input type="text" name="ThoiGian" value=" " hidden="true">
+                    <input required="true" type="text" class="form-control" id="title" name="title" value=" ">
                 </div>
 
                 <button class="btn btn-success">Lưu</button>

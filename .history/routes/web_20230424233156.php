@@ -10,7 +10,6 @@ use App\Http\Controllers\PhimController;
 use App\Http\Controllers\RapController;
 use App\Http\Controllers\SuatChieuController;
 use App\Http\Controllers\RoomController;
-use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -128,7 +127,7 @@ Route::get('/edit-Room/{IDPhongChieu}', [RoomController::class, 'edit_Room']);
 Route::get('/delete-Room/{IDPhongChieu}', [RoomController::class, 'delete_Room']);
 Route::post('/update-Room', [RoomController::class, 'update_Room']);
 //ticket
-Route::get('/movieTicket', [TicketController::class, 'all_Ticket'])->name('movieTicket');
-Route::get('/add-Ticket', [TicketController::class, 'add_Ticket']);
-Route::get('/all-Ticket', [TicketController::class, 'all_Ticket']);
-Route::post('/save-Ticket', [TicketController::class, 'save_Ticket']);
+Route::get('/movieTicket', [PhimController::class, 'all_Ticket'])->name('movieTicket');
+Route::get('/add-Ticket', [PhimController::class, 'add_Ticket']);
+Route::get('/all-Ticket', [PhimController::class, 'all_Ticket']);
+Route::post('/save-Ticket', [PhimController::class, 'save_Ticket']);

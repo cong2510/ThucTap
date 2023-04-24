@@ -17,19 +17,16 @@
                     <label for="name">Tên Phim:</label>
                     <select name="TenPhim" id="" class="form-control">
                         <option value=" ">Chọn phim</option>
-                        @foreach ( $Movie as $data)
-                        <option value=" ">{{ $data->TenPhim }}</option>
+                        @foreach ( $Theloai as $data)
+                        <option value=" ">{{ $data->TenTheLoai }}</option>
                         @endforeach
 
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="name">Tên Rạp:</label>
-                    @foreach ( $Rap as $data)
-                    <input type="checkbox" id="title" name="TenRap" value="{{ $data->TenRap }} ">
-                    <label>{{ $data->TenRap }}</label>
-
-                    @endforeach
+                    <label for="name">Tên rạp:</label>
+                    <input type="text" name="TenRap" value=" " hidden="true">
+                    <input required="true" type="text" class="form-control" id="title" name="title" value=" ">
                 </div>
 
                 <div class="form-group">
@@ -44,11 +41,8 @@
                 </div>
                 <div class="form-group">
                     <label for="name">Xuất chiếu:</label>
-                    @foreach ( $Suatchieu as $data)
-                    <input type="checkbox" id="title" name="ThoiGian" value="{{ $data->ThoiGian }} ">
-                    <label>{{ $data->ThoiGian }}</label>
-
-                    @endforeach
+                    <input type="text" name="ThoiGian" value=" " hidden="true">
+                    <input required="true" type="text" class="form-control" id="title" name="title" value=" ">
                 </div>
 
                 <button class="btn btn-success">Lưu</button>

@@ -24,12 +24,9 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="name">Tên Rạp:</label>
-                    @foreach ( $Rap as $data)
-                    <input type="checkbox" id="title" name="TenRap" value="{{ $data->TenRap }} ">
-                    <label>{{ $data->TenRap }}</label>
-
-                    @endforeach
+                    <label for="name">Tên rạp:</label>
+                    <input type="text" name="TenRap" value=" " hidden="true">
+                    <input required="true" type="text" class="form-control" id="title" name="title" value=" ">
                 </div>
 
                 <div class="form-group">
@@ -45,8 +42,9 @@
                 <div class="form-group">
                     <label for="name">Xuất chiếu:</label>
                     @foreach ( $Suatchieu as $data)
-                    <input type="checkbox" id="title" name="ThoiGian" value="{{ $data->ThoiGian }} ">
-                    <label>{{ $data->ThoiGian }}</label>
+                    <input type="checkbox" name="ThoiGian" value="{{ $data->ThoiGian }} " hidden="true">
+                    <input required="true" type="checkbox" class="form-control" id="title" name="title"
+                        value="{{ $data->ThoiGian }}">
 
                     @endforeach
                 </div>

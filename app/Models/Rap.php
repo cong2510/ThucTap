@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Movie extends Model
+class Rap extends Model
 {
     use HasFactory;
-    protected $table = 'phim';
-    protected $primaryKey = "IDPhim";
-    protected $fillable = ['TenPhim'];
+    protected $table = 'rapchieuphim';
+    protected $primaryKey = "IDRap ";
+    protected $fillable = ['TenRap'];
+
 }

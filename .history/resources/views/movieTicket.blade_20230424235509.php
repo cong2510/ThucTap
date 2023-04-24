@@ -21,15 +21,14 @@
 
                     </tr>
                 </thead>
-                <tbody style="text-align: center;">
-                    @foreach($all_Ticket as $key => $ticket)
+                <tbody>
                     <tr>
-                        <td>{{$movie->IDVe}} </td>
-                        <td>{{$movie->GiaVe }} </td>
-                        <td>{{$movie->TenPhim}} </td>
-                        <td>{{$movie->TenRap}} </td>
-                        <td>{{$movie->TenTheLoai}} </td>
-                        <td> {{$movie->ThoiGian}}</td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
 
                         <td>
                             <a href=" "><button class="btn btn-warning">Sửa</button></a>
@@ -38,7 +37,6 @@
                             <button class="btn btn-danger">Xoá</button>
                         </td>
                     </tr>
-                    @endforeach
                 </tbody>
             </table>
         </div>

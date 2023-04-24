@@ -10,12 +10,12 @@ use Session;
 
 use Illuminate\Support\Facades\Redirect;
 session_start();
-class PhimController extends Controller
+class TicketController extends Controller
 {
  
-    public function add_Movie(){
+    public function add_Ticket(){
         $Theloai= Theloai::all();
-        return view('/admin.movieAddMovie',compact('Theloai'));
+        return view('/movieAddTicket',compact('Theloai'));
     }
     public function all_Movie(){
         $all_Movie=DB::table('phim')->get();

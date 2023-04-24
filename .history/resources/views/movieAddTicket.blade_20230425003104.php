@@ -26,8 +26,8 @@
                 <div class="form-group">
                     <label for="name">Tên Rạp:</label>
                     @foreach ( $Rap as $data)
-                    <input type="checkbox" id="title" name="TenRap" value="{{ $data->TenRap }} ">
-                    <label>{{ $data->TenRap }}</label>
+                    <input type="checkbox" id="title" name="TenRap" class="form-control" value="{{ $data->TenRap }} ">
+                    <label class="form-control">{{ $data->TenRap }}</label>
 
                     @endforeach
                 </div>

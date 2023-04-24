@@ -51,8 +51,9 @@
 
                     <input class="form-control file" type="file" name="HinhAnh" data-max-file-count="15"
                         multiple="multiple">
-                </div>
 
+
+                </div>
                 <button type="submit" name="add_Movie" class="btn btn-success">Lưu</button>
             </form>
         </div>
