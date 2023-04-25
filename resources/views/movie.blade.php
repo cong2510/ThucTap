@@ -51,7 +51,7 @@
         </div>
         <div class="row">
             <div class="movie-picture col-4">
-                <img src="/images/{{ $movie['HinhAnh'] }}"alt="">
+                <img src="/images/{{ $movie['HinhAnh'] }}"alt="" style="width: 100%">
             </div>
             <div class="movie-content col-8">
                 <div class="movie-name">
@@ -63,17 +63,18 @@
                 <ul class="movie-info">
                     <li>
                         <span class="col-left">Thể loại: </span>
-                        @foreach ($theloais as $theloai)
+                        {{-- @foreach ($theloais as $theloai) --}}
                             <span class="col-right">
-                                @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
+                                {{-- @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
                                     {{ $theloai['TenTheLoai'] }}
-                                @endif
+                                @endif --}}
+                                {{ $movie['TenTheLoai'] }}
                             </span>
-                        @endforeach
+                        {{-- @endforeach --}}
                     </li>
                     <li>
                         <span class="col-left">Khởi chiếu: </span>
-                        <span class="col-right">{{ $movie['KhoiChieu'] }}</span>
+                        <span class="col-right">{{ $movie['NgayKhoiChieu'] }}</span>
                     </li>
                     <li>
                         <span class="col-left">Thời lượng: </span>
