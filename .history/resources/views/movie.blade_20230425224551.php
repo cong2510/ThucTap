@@ -51,10 +51,10 @@
         </div>
         <div class="row">
             <div class="movie-picture col-4">
-                <img src="/images/{{ $movie['HinhAnh'] }}" alt="">
-
-                <img src="/images/{{ $movie['HinhAnh'] }}" alt="" style="width: 100%">
-
+                <<<<<<< HEAD <img src="/images/{{ $movie['HinhAnh'] }}" alt="">
+                    =======
+                    <img src="/images/{{ $movie['HinhAnh'] }}" alt="" style="width: 100%">
+                    >>>>>>> 1209b514f4d196912a1aed2a30bdd69f8e9be280
             </div>
             <div class="movie-content col-8">
                 <div class="movie-name">
@@ -91,6 +91,7 @@
                         <span class="col-left">Thời lượng: </span>
                         <span class="col-right">{{ $movie['ThoiLuong'] }}</span>
                     </li>
+
                     <li>
                         <span class="col-left">
                             <button type="button" class="btn btn-muave" style="background: #66CC00;margin-right: 10px"
