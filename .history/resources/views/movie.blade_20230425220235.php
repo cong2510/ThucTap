@@ -85,7 +85,7 @@
                     </li>
                     <li>
                         <span class="col-left">Khởi chiếu: </span>
-                        <span class="col-right">{{ $movie['KhoiChieu'] }}</span>
+                        <span class="col-right">{{ $movie['NgayKhoiChieu'] }}</span>
                     </li>
                     <li>
                         <span class="col-left">Thời lượng: </span>

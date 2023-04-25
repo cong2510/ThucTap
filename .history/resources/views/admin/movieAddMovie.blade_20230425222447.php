@@ -22,7 +22,7 @@
 
                         <option value=" ">Chọn thể loại</option>
                         @foreach ( $Theloai as $data)
-                        <option value="{{ $data->TenTheLoai }}">{{ $data->TenTheLoai }}</option>
+                        <option value=" ">{{ $data->TenTheLoai }}</option>
                         @endforeach
 
                     </select>
@@ -57,7 +57,7 @@
                 <div class="form-group">
                     <label for="name">Trailer:</label>
 
-                    <input class="form-control file" type="file" name="Trailer" data-max-file-count=""
+                    <input class="form-control file" type="file" name="Trailer" data-max-file-count="15"
                         multiple="multiple">
                 </div>
                 <button type="submit" name="add_Movie" class="btn btn-success">Lưu</button>

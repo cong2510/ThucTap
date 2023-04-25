@@ -34,7 +34,7 @@
                 <div class="form-group">
                     <label for="name">Giá vé :</label>
                     <input type="text" name="GiaVe" value=" " hidden="true">
-                    <input required="true" type="text" class="form-control" id="title" name="GiaVe" value=" ">
+                    <input required="true" type="text" class="form-control" id="title" name="title" value=" ">
                 </div>
 
 

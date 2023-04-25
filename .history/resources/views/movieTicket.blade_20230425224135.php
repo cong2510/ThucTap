@@ -21,10 +21,10 @@
                 <tbody style="text-align: center;">
                     @foreach($all_Ticket as $key => $ticket)
                     <tr>
-                        <td>{{$ticket->IDVe}} </td>
-                        <td>{{$ticket->TenPhim}} </td>
-                        <td>{{$ticket->TenTheLoai}} </td>
-                        <td>{{$ticket->GiaVe }} VNĐ</td>
+                        <td>{{$movie->IDVe}} </td>
+                        <td>{{$movie->TenPhim}} </td>
+                        <td>{{$movie->TenTheLoai}} </td>
+                        <td>{{$movie->GiaVe }} </td>
 
 
                         <td>

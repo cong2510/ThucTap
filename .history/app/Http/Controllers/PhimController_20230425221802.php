@@ -38,7 +38,7 @@ class PhimController extends Controller
         $data['TenPhim']=$request->TenPhim;
         $data['TenTheLoai']=$request->TenTheLoai;
         $data['ThoiLuong']=$request->ThoiLuong;
-        $data['KhoiChieu']=$request->KhoiChieu;
+        $data['KhoiChieu']=$request->NgayKhoiChieu;
         $data['Mota']=$request->Mota;
         $data['HinhAnh']= $file_name;
         $data['Trailer']= $file_namee;

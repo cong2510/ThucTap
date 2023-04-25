@@ -24,7 +24,7 @@
                         <td>{{$ticket->IDVe}} </td>
                         <td>{{$ticket->TenPhim}} </td>
                         <td>{{$ticket->TenTheLoai}} </td>
-                        <td>{{$ticket->GiaVe }} VNĐ</td>
+                        <td>{{$ticket->GiaVe }} </td>
 
 
                         <td>

@@ -66,26 +66,26 @@
                 <ul class="movie-info">
                     <li>
                         <span class="col-left">Thể loại: </span>
-                        @foreach ($theloais as $theloai) <span class="col-right">
+                        <<<<<<< HEAD @foreach ($theloais as $theloai) <span class="col-right">
                             @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
                             {{ $theloai['TenTheLoai'] }}
                             @endif
-                        </span>
-                        @endforeach
-
-                        @foreach ($theloais as $theloai)
-                        <span class="col-right">
-                            @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
-                            {{ $theloai['TenTheLoai'] }}
-                            @endif
-                            {{ $movie['TenTheLoai'] }}
-                        </span>
-                        @endforeach
-
+                            </span>
+                            @endforeach
+                            =======
+                            {{-- @foreach ($theloais as $theloai) --}}
+                            <span class="col-right">
+                                {{-- @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
+                                    {{ $theloai['TenTheLoai'] }}
+                                @endif --}}
+                                {{ $movie['TenTheLoai'] }}
+                            </span>
+                            {{-- @endforeach --}}
+                            >>>>>>> 1209b514f4d196912a1aed2a30bdd69f8e9be280
                     </li>
                     <li>
                         <span class="col-left">Khởi chiếu: </span>
-                        <span class="col-right">{{ $movie['KhoiChieu'] }}</span>
+                        <span class="col-right">{{ $movie['NgayKhoiChieu'] }}</span>
                     </li>
                     <li>
                         <span class="col-left">Thời lượng: </span>

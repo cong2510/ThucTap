@@ -33,7 +33,12 @@
                     <input required="true" name="ThoiLuong" type="text" class="form-control" id="title" name="title"
                         value=" ">
                 </div>
+                <div class=" form-group">
+                    <label for="name">Giá Vé:</label>
 
+                    <input required="true" name="GiaVe" type="text" class="form-control" id="title" name="title"
+                        value=" ">
+                </div>
                 <div class="form-group">
                     <label for="name">Mô Tả:</label>
 
@@ -44,8 +49,8 @@
                     <div class=" form-group">
                         <label for="name">Ngày Khởi Chiếu:</label>
 
-                        <input required="true" name="KhoiChieu" type="date" class="form-control" id="title" name="title"
-                            value=" ">
+                        <input required="true" name="NgayKhoiChieu" type="date" class="form-control" id="title"
+                            name="title" value=" ">
                     </div>
                     <label for="name">Ảnh Kèm Theo:</label>
 
@@ -57,7 +62,7 @@
                 <div class="form-group">
                     <label for="name">Trailer:</label>
 
-                    <input class="form-control file" type="file" name="Trailer" data-max-file-count=""
+                    <input class="form-control file" type="file" name="Trailer" data-max-file-count="15"
                         multiple="multiple">
                 </div>
                 <button type="submit" name="add_Movie" class="btn btn-success">Lưu</button>

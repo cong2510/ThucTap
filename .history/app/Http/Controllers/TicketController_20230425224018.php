@@ -33,10 +33,10 @@ class TicketController extends Controller
     public function save_Ticket(Request $request){
         $data =array();
         $data['IDVe']=$request->IDVe; 
-        $data['TenPhim']=$request->TenPhim;
-        $data['TenTheLoai']=$request->TenTheLoai;
         $data['GiaVe']=$request->GiaVe;
+        $data['TenPhim']=$request->TenPhim;
  
+        $data['TenTheLoai']=$request->TenTheLoai;
  
         DB::table('ve')->insert($data);
         Session::put('message','Thêm vé thành công');

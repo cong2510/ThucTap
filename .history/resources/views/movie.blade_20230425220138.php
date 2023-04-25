@@ -72,20 +72,20 @@
                             @endif
                         </span>
                         @endforeach
-
-                        @foreach ($theloais as $theloai)
+                        =======
+                        {{-- @foreach ($theloais as $theloai) --}}
                         <span class="col-right">
-                            @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
-                            {{ $theloai['TenTheLoai'] }}
-                            @endif
+                            {{-- @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
+                                    {{ $theloai['TenTheLoai'] }}
+                            @endif --}}
                             {{ $movie['TenTheLoai'] }}
                         </span>
-                        @endforeach
+                        {{-- @endforeach --}}
 
                     </li>
                     <li>
                         <span class="col-left">Khởi chiếu: </span>
-                        <span class="col-right">{{ $movie['KhoiChieu'] }}</span>
+                        <span class="col-right">{{ $movie['NgayKhoiChieu'] }}</span>
                     </li>
                     <li>
                         <span class="col-left">Thời lượng: </span>

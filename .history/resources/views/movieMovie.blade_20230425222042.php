@@ -52,9 +52,10 @@
                         <td>{{$movie->ThoiLuong}} </td>
                         <td>{{$movie->KhoiChieu}} </td>
                         <td>{{$movie->Mota}} </td>
-                        <td><img style="max-width: 300px; height: 300px;" src="{{ URL::to('images/'.$movie->HinhAnh)}}"
+
+                        <td><img style="max-width: 300px; height: auto;" src="{{ URL::to('images/'.$movie->HinhAnh)}}"
                                 alt=""> </td>
-                        <td><img style="max-width: 300px; height: 300px;" src="{{ URL::to('trailer/'.$movie->Trailer)}}"
+                        <td><img style="max-width: 300px; height: auto;" src="{{ URL::to('trailer/'.$movie->Trailer)}}"
                                 alt=""> </td>
                         <td width="50px">
                             <a href="  "><button class="btn btn-warning">Sửa</button></a>
