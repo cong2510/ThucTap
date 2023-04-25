@@ -63,7 +63,7 @@
                 <ul class="movie-info">
                     <li>
                         <span class="col-left">Thể loại: </span>
-                        @foreach ($theloais as $theloai)
+                        @foreach ($theloai as $theloai)
                         <span class="col-right">
                             @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
                             {{ $theloai['TenTheLoai'] }}
@@ -80,10 +80,6 @@
                         <span class="col-right">{{ $movie['ThoiLuong'] }}</span>
                     </li>
                     <li>
-                        <span class="col-left">Giá Vé: </span>
-                        <span class="col-right">{{ $movie['GiaVe'] }}</span>
-                    </li>
-                    <li>
                         <span class="col-left">
                             <button type="button" class="btn btn-muave" style="background: #66CC00;margin-right: 10px"
                                 data-bs-toggle="collapse" data-bs-target="#trailer">
@@ -94,7 +90,7 @@
                         </span>
                         <span class="col-right">
                             <button type="button" class="btn btn-muave hover-bg-white" style="background: #66CC00;">
-                                <a href="{{ route('ticket') }}"
+                                <a href="#"
                                     style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 8px;">MUA
                                     VÉ</a>
                             </button>

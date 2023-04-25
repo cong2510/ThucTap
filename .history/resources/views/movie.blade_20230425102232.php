@@ -94,7 +94,7 @@
                         </span>
                         <span class="col-right">
                             <button type="button" class="btn btn-muave hover-bg-white" style="background: #66CC00;">
-                                <a href="{{ route('ticket') }}"
+                                <a href="#"
                                     style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 8px;">MUA
                                     VÉ</a>
                             </button>

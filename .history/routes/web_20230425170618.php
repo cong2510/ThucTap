@@ -32,7 +32,8 @@ Route::get('/', function () {
 Route::get('/', [MovieController::class, 'index'])->name('index');
 Route::get('/movie/{id}', [MovieController::class, 'movie'])->name('movie');
 
- 
+//datve
+Route::get('/ticket ', [DatVeController::class, 'ticket'])->name('ticket');
 
 Route::get('/dangky', function () {
     return view('register');
@@ -103,8 +104,7 @@ Route::get('/movieMovie', [PhimController::class, 'all_Movie'])->name('movieMovi
 Route::get('/add-Movie', [PhimController::class, 'add_Movie']);
 Route::get('/all-Movie', [PhimController::class, 'all_Movie']);
 Route::post('/save-Movie', [PhimController::class, 'save_Movie']);
- //datve
-Route::get('/ticket', [DatVeController::class, 'ticket'])->name('ticket');
+ 
 //Chair
 Route::get('/chair', [ChairController::class, 'all_Chair'])->name('chair');
 Route::get('/add-Chair', [ChairController::class, 'add_Chair']);
