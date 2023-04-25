@@ -17,23 +17,30 @@ use Illuminate\Support\Facades\Redirect;
 class DatVeController extends Controller
 {
  
-     
- 
- 
-    public function ticket($idd)
-    {
-        $movie = Movie::find($idd);
+    public function ticket(){
+        $Theloai = Theloai::all();
+        $Movie = Movie::all();
         $Suatchieu = SuatChieu::all();
         $Rap = Rap::all();
         $Ghe = Ghe::all();
+        return view('ticket', [
+            'Theloai' => $Theloai,
+            'Movie' =>$Movie,
+            'Suatchieu' =>$Suatchieu,
+            'Rap' =>$Rap,
+            'Ghe' =>$Ghe,
+        ]);
+ 
+    }
+    public function ticket($id)
+    {
+        $movie = Movie::find($id);
         if ($movie === null) {
             return view('errors.404');
         } else {
             return view('ticket', [
                 'movie' => $movie,
-                'Suatchieu' =>$Suatchieu,
-                'Rap' =>$Rap,
-                'Ghe' =>$Ghe,
+       
             ]);
         }
     }   

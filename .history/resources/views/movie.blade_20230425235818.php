@@ -51,10 +51,10 @@
         </div>
         <div class="row">
             <div class="movie-picture col-4">
-                <<<<<<< HEAD <img src="/images/{{ $movie['HinhAnh'] }}" alt="">
-                    =======
-                    <img src="/images/{{ $movie['HinhAnh'] }}" alt="" style="width: 100%">
-                    >>>>>>> 1209b514f4d196912a1aed2a30bdd69f8e9be280
+                <img src="/images/{{ $movie['HinhAnh'] }}" alt="">
+
+                <img src="/images/{{ $movie['HinhAnh'] }}" alt="" style="width: 100%">
+
             </div>
             <div class="movie-content col-8">
                 <div class="movie-name">

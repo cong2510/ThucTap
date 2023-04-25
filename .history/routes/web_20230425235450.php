@@ -104,7 +104,7 @@ Route::get('/add-Movie', [PhimController::class, 'add_Movie']);
 Route::get('/all-Movie', [PhimController::class, 'all_Movie']);
 Route::post('/save-Movie', [PhimController::class, 'save_Movie']);
  //datve
-Route::get('/ticket/{idd}', [DatVeController::class, 'ticket'])->name('ticket');
+Route::get('/ticket/{id}', [DatVeController::class, 'ticket'])->name('ticket');
 //Chair
 Route::get('/chair', [ChairController::class, 'all_Chair'])->name('chair');
 Route::get('/add-Chair', [ChairController::class, 'add_Chair']);
