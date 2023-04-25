@@ -51,7 +51,11 @@
         </div>
         <div class="row">
             <div class="movie-picture col-4">
+<<<<<<< HEAD
                 <img src="/images/{{ $movie['HinhAnh'] }}" alt="">
+=======
+                <img src="/images/{{ $movie['HinhAnh'] }}"alt="" style="width: 100%">
+>>>>>>> 1209b514f4d196912a1aed2a30bdd69f8e9be280
             </div>
             <div class="movie-content col-8">
                 <div class="movie-name">
@@ -63,6 +67,7 @@
                 <ul class="movie-info">
                     <li>
                         <span class="col-left">Thể loại: </span>
+<<<<<<< HEAD
                         @foreach ($theloais as $theloai)
                         <span class="col-right">
                             @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
@@ -70,6 +75,16 @@
                             @endif
                         </span>
                         @endforeach
+=======
+                        {{-- @foreach ($theloais as $theloai) --}}
+                            <span class="col-right">
+                                {{-- @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
+                                    {{ $theloai['TenTheLoai'] }}
+                                @endif --}}
+                                {{ $movie['TenTheLoai'] }}
+                            </span>
+                        {{-- @endforeach --}}
+>>>>>>> 1209b514f4d196912a1aed2a30bdd69f8e9be280
                     </li>
                     <li>
                         <span class="col-left">Khởi chiếu: </span>

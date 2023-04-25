@@ -35,7 +35,7 @@
                 <div class="container" style="width: 90%">
                     <swiper-container class="mySwiper" slides-per-view="5" space-between="30" free-mode="true">
                         @foreach ($movies as $movie)
-                            @if ($movie['KhoiChieu'] <= Carbon\Carbon::today())
+                            @if ($movie['NgayKhoiChieu'] <= Carbon\Carbon::today())
                                 <swiper-slide class="product-slide">
                                     <div class="card border-0" style="background-color: transparent !important;">
                                         <a href="{{ route('movie', $movie['IDPhim']) }}" title="">
@@ -74,7 +74,7 @@
                 <div class="container" style="width: 90%">
                     <swiper-container class="mySwiper" slides-per-view="5" space-between="30" free-mode="true">
                         @foreach ($movies as $movie)
-                            @if ($movie['KhoiChieu'] > Carbon\Carbon::today())
+                            @if ($movie['NgayKhoiChieu'] > Carbon\Carbon::today())
                                 <swiper-slide class="product-slide">
                                     <div class="card border-0" style="background-color: transparent !important;">
                                         <a href="{{ route('movie', $movie['IDPhim']) }}" title="">
