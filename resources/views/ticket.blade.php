@@ -75,21 +75,8 @@
                         <input required="true" name="NgayXem" type="date" class="form-control" id="title" name="title"
                             value=" ">
                     </div>
-                    <div class=" form-group">
-                        <label for="name">Số lượng vé:</label>
-
-
-                        <div class="product_count">
-                            <input disabled type="text" name="qty" id=" " maxlength="12" value="1 " title="Quantity:"
-                                class="input-text qty">
-                            <button onclick=" " class="increase items-count" type="button"><i
-                                    class="fa-solid fa-chevron-up"></i></button>
-                            <button onclick=" " class="reduced items-count" type="button"><i
-                                    class="fa-solid fa-chevron-down"></i></button>
-                        </div>
-
-                    </div>
-                    <button class="btn btn-success">Đặt vé</button>
+                    
+                    <button class="btn btn-success" name="insert_Ve">Đặt vé</button>
                 </form>
             </div>
         </div>

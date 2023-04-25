@@ -38,4 +38,7 @@ class DatVeController extends Controller
         }
     }   
  
+    public function insert_Ve(){
+        return view('DonThanhToan');
+    }
 }
