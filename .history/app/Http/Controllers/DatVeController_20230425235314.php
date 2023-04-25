@@ -20,9 +20,9 @@ class DatVeController extends Controller
      
  
  
-    public function ticket($idd)
+    public function ticket($id)
     {
-        $movie = Movie::find($idd);
+        $movie = Movie::find($id);
         $Suatchieu = SuatChieu::all();
         $Rap = Rap::all();
         $Ghe = Ghe::all();

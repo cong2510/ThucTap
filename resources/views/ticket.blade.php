@@ -23,13 +23,16 @@
                     <div class="form-group">
                         <label for="name">Tên phim:</label>
                         <div class="movie-name">
-
+                            {{ $movie['TenPhim'] }}
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="name">Tên Thể Loại:
                         </label>
+                        <div class="category-name">
+                            {{ $movie['TenTheLoai'] }}
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="name">Chọn Rạp Chiếu:</label>

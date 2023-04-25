@@ -18,22 +18,15 @@ class DatVeController extends Controller
 {
  
      
- 
- 
-    public function ticket($idd)
+    public function ticket($id)
     {
-        $movie = Movie::find($idd);
-        $Suatchieu = SuatChieu::all();
-        $Rap = Rap::all();
-        $Ghe = Ghe::all();
+        $movie = Movie::find($id);
         if ($movie === null) {
             return view('errors.404');
         } else {
             return view('ticket', [
                 'movie' => $movie,
-                'Suatchieu' =>$Suatchieu,
-                'Rap' =>$Rap,
-                'Ghe' =>$Ghe,
+       
             ]);
         }
     }   
