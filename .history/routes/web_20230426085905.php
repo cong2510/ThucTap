@@ -78,7 +78,7 @@ Route::get('/rap', function () {
 })->name('rap');
 Route::get('/donDatVe', function () {
     return view('donDatVe');
-})->name('donDatVe');
+})->name('rdonDatVep');
  
 //User
 Route::get('/movieUser', [UserController::class, 'all_User'])->name('movieUser');
@@ -108,9 +108,6 @@ Route::get('/all-Movie', [PhimController::class, 'all_Movie']);
 Route::post('/save-Movie', [PhimController::class, 'save_Movie']);
  //datve
 Route::get('/ticket/{idd}', [DatVeController::class, 'ticket'])->name('ticket');
-Route::get('/add-donDatVe', [DatVeController::class, 'add_donDatVe']);
-Route::get('/all-donDatVe', [DatVeController::class, 'all_donDatVe']);
-Route::post('/save-donDatVe', [DatVeController::class, 'save_donDatVe']);
 //Chair
 Route::get('/chair', [ChairController::class, 'all_Chair'])->name('chair');
 Route::get('/add-Chair', [ChairController::class, 'add_Chair']);

@@ -73,7 +73,10 @@
                         </span>
 
                     </li>
-
+                    <li>
+                        <span class="col-left">Giá vé: </span>
+                        <span class="col-right">{{ $ve['GiaVe'] }}</span>
+                    </li>
                     <li>
                         <span class="col-left">Khởi chiếu: </span>
                         <span class="col-right">{{ $movie['KhoiChieu'] }}</span>

@@ -24,14 +24,14 @@ class MovieController extends Controller
     {
         $movie = Movie::find($id);
         $theloais = Theloai::all();
-        $Ve =Ve::all();
+        $ve =Ve::all();
         if ($movie === null) {
             return view('errors.404');
         } else {
             return view('movie', [
                 'movie' => $movie,
                 'theloais' =>$theloais,
-                've' =>$Ve,
+                've' =>$ve,
             ]);
         }
     }

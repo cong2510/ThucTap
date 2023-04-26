@@ -40,9 +40,6 @@ class DatVeController extends Controller
             ]);
         }
     }   
-    public function add_donDatVe(){
-        return view('/donDatVe');
-    }
     public function all_donDatVe(){
         $all_donDatVe=DB::table('dondatve')->get();
         $manager_Movie=view('/donDatVe')->with('/donDatVe',$all_donDatVe);

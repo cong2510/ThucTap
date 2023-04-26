@@ -40,30 +40,34 @@ class DatVeController extends Controller
             ]);
         }
     }   
-    public function add_donDatVe(){
-        return view('/donDatVe');
-    }
     public function all_donDatVe(){
         $all_donDatVe=DB::table('dondatve')->get();
         $manager_Movie=view('/donDatVe')->with('/donDatVe',$all_donDatVe);
         return view('donDatVe')->with('all_donDatVe',$all_donDatVe);
     }
-    public function save_donDatVe(Request $request){
- 
- 
+    public function save_Movie(Request $request){
+        if($request ->has('HinhAnh')){
+            $file =$request->HinhAnh;
+            $file_name=$file->getClientOriginalName();
+            $file->move(base_path('/public/images'),$file_name);
+        }
+        if($request ->has('Trailer')){
+            $file =$request->Trailer;
+            $file_namee=$file->getClientOriginalName();
+            $file->move(base_path('/public/trailer'),$file_namee);
+        }
         $data =array();
-        $data['IDDonDatVe']=$request->IDDonDatVe; 
+        $data['IDPhim']=$request->IDPhim; 
         $data['TenPhim']=$request->TenPhim;
         $data['TenTheLoai']=$request->TenTheLoai;
-        $data['TenRap']=$request->TenRap;
-        $data['ThoiGian']=$request->ThoiGian;
-        $data['SoGhe']=$request->SoGhe;
-        $data['HangGhe']=$request->HangGhe;
-        $data['NgayXem']=$request->NgayXem;
- 
-        DB::table('dondatve')->insert($data);
-  
-        return Redirect::to('donDatVe');
+        $data['ThoiLuong']=$request->ThoiLuong;
+        $data['KhoiChieu']=$request->KhoiChieu;
+        $data['Mota']=$request->Mota;
+        $data['HinhAnh']= $file_name;
+        $data['Trailer']= $file_namee;
+        DB::table('phim')->insert($data);
+        Session::put('message','Thêm Phim thành công');
+        return Redirect::to('movieMovie');
     }
      
  

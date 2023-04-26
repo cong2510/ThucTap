@@ -73,7 +73,6 @@
                         </span>
 
                     </li>
-
                     <li>
                         <span class="col-left">Khởi chiếu: </span>
                         <span class="col-right">{{ $movie['KhoiChieu'] }}</span>

@@ -19,10 +19,10 @@
                 <h2 class="text-center">ĐẶT VÉ</h2>
             </div>
             <div class="panel-body">
-                <form method="post" enctype="multipart/form-data">
+                <form method="post" action="{{URL::to('pay')}}" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name">Tên phim:</label>
-                        <div class="movie-name">
+                        <div class="movie-name" name="TenPhim">
                             {{ $movie['TenPhim'] }}
                         </div>
                     </div>
@@ -30,10 +30,11 @@
                     <div class="form-group">
                         <label for="name">Tên Thể Loại:
                         </label>
-                        <div class="category-name">
+                        <div class="TenTheLoai" name="TenTheLoai">
                             {{ $movie['TenTheLoai'] }}
                         </div>
                     </div>
+
                     <div class="form-group">
                         <label for="name">Chọn Rạp Chiếu:</label>
                         <select name="TenTheLoai" id="" class="form-control">
@@ -75,20 +76,21 @@
                         <input required="true" name="NgayXem" type="date" class="form-control" id="title" name="title"
                             value=" ">
                     </div>
-                    <div class=" form-group">
+                    <!-- <div class=" form-group">
                         <label for="name">Số lượng vé:</label>
 
 
                         <div class="product_count">
+                            <a onclick=" " class="increase items-count" type="button"><i
+                                    class="fa-solid fa-chevron-up"></i></a>
                             <input disabled type="text" name="qty" id=" " maxlength="12" value="1 " title="Quantity:"
                                 class="input-text qty">
-                            <button onclick=" " class="increase items-count" type="button"><i
-                                    class="fa-solid fa-chevron-up"></i></button>
-                            <button onclick=" " class="reduced items-count" type="button"><i
-                                    class="fa-solid fa-chevron-down"></i></button>
+
+                            <a onclick=" " class="reduced items-count" type="button"><i
+                                    class="fa-solid fa-chevron-down"></i></a>
                         </div>
 
-                    </div>
+                    </div> -->
                     <button class="btn btn-success">Đặt vé</button>
                 </form>
             </div>

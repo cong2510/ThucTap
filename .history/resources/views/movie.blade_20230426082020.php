@@ -66,14 +66,15 @@
                 <ul class="movie-info">
                     <li>
                         <span class="col-left">Thể loại: </span>
-
-
-                        <span class="col-right">
-                            {{ $movie['TenTheLoai'] }}
+                        @foreach ($theloais as $theloai) <span class="col-right">
+                            @if ($theloai['IDTheLoai'] == $movie['IDTheLoai'])
+                            {{ $theloai['TenTheLoai'] }}
+                            @endif
                         </span>
+                        @endforeach
+
 
                     </li>
-
                     <li>
                         <span class="col-left">Khởi chiếu: </span>
                         <span class="col-right">{{ $movie['KhoiChieu'] }}</span>
