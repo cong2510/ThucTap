@@ -19,7 +19,7 @@
                 <h2 class="text-center">ĐẶT VÉ</h2>
             </div>
             <div class="panel-body">
-                <form method="post" action="{{URL::to('Donthanhtoan')}}" enctype="multipart/form-data">
+                <form method="post" action="{{URL::to('dondatve')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Tên phim:</label>
@@ -35,7 +35,12 @@
                             {{ $movie['TenTheLoai'] }}
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label for="name">Tên khách hàng:</label>
+                        <input type="text" value=" " hidden="true">
+                        <input required="true" name="TenKH" type="text" class="form-control" id="title" name="title"
+                            value=" ">
+                    </div>
                     <div class="form-group">
                         <label for="name">Chọn Rạp Chiếu:</label>
                         <select name="TenRap" id="" class="form-control">
@@ -80,11 +85,7 @@
 
 
 
-                    <button type="submit" class="btn btn-success" name="insert_Ve"><a
-                            href="{{ route('Donthanhtoan' ) }}"
-                            style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 8px;">Đặt
-                            Vé
-                        </a></button>
+                    <button type="submit" class="btn btn-success" name="insert_Ve">Đặt vé</button>
 
                 </form>
             </div>

@@ -14,7 +14,6 @@
                         <th>ID Đơn Đặt Vé</th>
 
                         <th>Tên Rạp</th>
-                        <th>Tên Khách Hàng</th>
                         <th>Suất Chiếu</th>
                         <th>Số Ghế</th>
                         <th>Hàng Ghế</th>
@@ -28,7 +27,6 @@
                     <tr>
                         <td>{{$donDatVe->IDDonDatVe}} </td>
                         <td>{{$donDatVe->TenRap}} </td>
-                        <td>{{$donDatVe->TenKH}} </td>
                         <td>{{$donDatVe->ThoiGian}} </td>
                         <td>{{$donDatVe->SoGhe}} </td>
                         <td>{{$donDatVe->HangGhe}} </td>

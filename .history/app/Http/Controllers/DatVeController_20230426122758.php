@@ -44,16 +44,15 @@ class DatVeController extends Controller
         return view('/');
     }
     public function all_donDatVe(){
-       $all_donDatVe=DB::table('dondatve')->get();
+        $all_donDatVe=DB::table('dondatve')->get();
         $manager_DatVe=view('/donDatVe')->with('/donDatVe',$all_donDatVe);
-
         return view('donDatVe')->with('all_donDatVe',$all_donDatVe);
-
     }
     public function dondatve(Request $request){
+ 
+ 
         $data =array();
         $data['TenRap']=$request->TenRap;
-        $data['TenKH']=$request->TenKH;
         $data['ThoiGian']=$request->ThoiGian;
         $data['SoGhe']=$request->SoGhe;
         $data['HangGhe']=$request->HangGhe;
@@ -61,7 +60,7 @@ class DatVeController extends Controller
  
         DB::table('dondatve')->insert($data);
   
-        return view('ThanhCong');
+        return view('donDatVe');
     }
     
     public function save_donDatVe(Request $request){
@@ -69,9 +68,9 @@ class DatVeController extends Controller
  
         $data =array();
         $data['IDDonDatVe']=$request->IDDonDatVe; 
- 
+        $data['TenPhim']=$request->TenPhim;
+        $data['TenTheLoai']=$request->TenTheLoai;
         $data['TenRap']=$request->TenRap;
-        $data['TenKH']=$request->TenKH;
         $data['ThoiGian']=$request->ThoiGian;
         $data['SoGhe']=$request->SoGhe;
         $data['HangGhe']=$request->HangGhe;
@@ -79,12 +78,12 @@ class DatVeController extends Controller
  
         DB::table('dondatve')->insert($data);
   
-        return view('Donthanhtoan' );
+        return view('donDatVe' );
     }
      
  
     public function insert_Ve(){
-        return view('Donthanhtoan');
+        return view('donDatVe');
     }
     
 }

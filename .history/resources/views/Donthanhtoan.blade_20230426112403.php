@@ -19,29 +19,30 @@
                 <h2 class="text-center">ThanhToan</h2>
             </div>
             <div class="panel-body">
-                <form method="get" action="{{URL::to('ThanhCong')}}" enctype="multipart/form-data">
+                <form method="post" action="{{URL::to('index')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Tên Khách hàng:</label>
-                        <input type="text" value=" " hidden="true">
-                        <input required="true" name="TenKH" type="text" class="form-control" id="title" name="title"
-                            value=" ">
+                        <div class="movie-name" name="TenPhim">
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="name">Email:</label>
-                        <input type="text" value=" " hidden="true">
-                        <input required="true" name="email" type="email" class="form-control" id="title" name="title"
-                            value=" ">
+                        <label for="name">Email:
+                        </label>
+                        <div class="TenTheLoai" name="TenTheLoai">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="name">Hình Thức Thanh Toán:
                         </label>
-                        <select name="thanhtoan" id="" class="form-control">
+                        <select name="HangGhe" id="" class="form-control">
                             <option value=" ">Chọn hình thức thanh toán:</option>
-                            <option name="momo" value="momo">Ví điện tử momo </option>
-                            <option name="zalopay" value="zalopay">ZaloPay </option>
-                            <option name="vnpay" value="vnpay">VNPay</option>
-                            <option name="taiquay" value="taiquay">Thanh Toán Khi nhận vé</option>
+
+                            <option value="momo">Ví điện tử momo </option>
+                            <option value="zalopay">ZaloPay </option>
+                            <option value="vnpay">VNPay</option>
+                            <option value="taiquay">Thanh Toán Khi nhận vé</option>
+
                         </select>
                     </div>
                     <button class="btn btn-success">Thanh Toán</button>

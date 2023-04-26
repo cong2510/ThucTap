@@ -12,7 +12,6 @@ use App\Http\Controllers\SuatChieuController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\DatVeController;
-use App\Http\Controllers\ThanhToanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -86,9 +85,6 @@ Route::get('/Donthanhtoan', function () {
 Route::get('/ThanhCong', function () {
     return view('ThanhCong');
 })->name('ThanhCong');
-Route::get('/HoaDon', function () {
-    return view('HoaDon');
-})->name('HoaDon');
  
 //User
 Route::get('/movieUser', [UserController::class, 'all_User'])->name('movieUser');
@@ -117,18 +113,11 @@ Route::get('/add-Movie', [PhimController::class, 'add_Movie']);
 Route::get('/all-Movie', [PhimController::class, 'all_Movie']);
 Route::post('/save-Movie', [PhimController::class, 'save_Movie']);
  //datve
- Route::get('/dondatve', [DatVeController::class, 'all_donDatVe'])->name('donDatVe');
 Route::get('/ticket/{idd}', [DatVeController::class, 'ticket'])->name('ticket');
 Route::post('/dondatve', [DatVeController::class, 'dondatve']);
 Route::get('/add-donDatVe', [DatVeController::class, 'add_donDatVe']);
 Route::get('/all-donDatVe', [DatVeController::class, 'all_donDatVe']);
 Route::post('/save-donDatVe', [DatVeController::class, 'save_donDatVe']);
-
- //thanhtoan
- Route::get('/HoaDon', [ThanhToanController::class, 'all_ThanhToan'])->name('HoaDon');
- Route::get('/add-ThanhToan', [ThanhToanController::class, 'add_ThanhToan']);
- Route::get('/all-ThanhToan', [ThanhToanController::class, 'all_ThanhToan']);
- Route::post('/save-ThanhToan', [ThanhToanController::class, 'save_ThanhToan']);
 //Chair
 Route::get('/chair', [ChairController::class, 'all_Chair'])->name('chair');
 Route::get('/add-Chair', [ChairController::class, 'add_Chair']);

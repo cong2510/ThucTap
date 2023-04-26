@@ -117,13 +117,11 @@ Route::get('/add-Movie', [PhimController::class, 'add_Movie']);
 Route::get('/all-Movie', [PhimController::class, 'all_Movie']);
 Route::post('/save-Movie', [PhimController::class, 'save_Movie']);
  //datve
- Route::get('/dondatve', [DatVeController::class, 'all_donDatVe'])->name('donDatVe');
 Route::get('/ticket/{idd}', [DatVeController::class, 'ticket'])->name('ticket');
 Route::post('/dondatve', [DatVeController::class, 'dondatve']);
 Route::get('/add-donDatVe', [DatVeController::class, 'add_donDatVe']);
 Route::get('/all-donDatVe', [DatVeController::class, 'all_donDatVe']);
 Route::post('/save-donDatVe', [DatVeController::class, 'save_donDatVe']);
-
  //thanhtoan
  Route::get('/HoaDon', [ThanhToanController::class, 'all_ThanhToan'])->name('HoaDon');
  Route::get('/add-ThanhToan', [ThanhToanController::class, 'add_ThanhToan']);

@@ -67,7 +67,9 @@
             <li class="nav-item col-md-3">
                 <a class="nav-link " href="{{ route('donDatVe') }}"> Quản Lí đơn đặt vé</a>
             </li>
-
+            <li class="nav-item col-md-3">
+                <a class="nav-link " href="{{ route('HoaDon') }}"> Quản Lí hóa đơn</a>
+            </li>
         </ul>
     </div>
     @yield('admin')

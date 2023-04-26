@@ -19,7 +19,7 @@
                 <h2 class="text-center">ThanhToan</h2>
             </div>
             <div class="panel-body">
-                <form method="get" action="{{URL::to('ThanhCong')}}" enctype="multipart/form-data">
+                <form method="post" action="{{URL::to('ThanhCong')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Tên Khách hàng:</label>
@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label for="name">Email:</label>
                         <input type="text" value=" " hidden="true">
-                        <input required="true" name="email" type="email" class="form-control" id="title" name="title"
+                        <input required="true" name="email" type="text" class="form-control" id="title" name="title"
                             value=" ">
                     </div>
                     <div class="form-group">
