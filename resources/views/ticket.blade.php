@@ -76,6 +76,7 @@
                         <input required="true" name="NgayXem" type="date" class="form-control" id="title" name="title"
                             value=" ">
                     </div>
+<<<<<<< HEAD
                     <!-- <div class=" form-group">
                         <label for="name">Số lượng vé:</label>
 
@@ -92,6 +93,10 @@
 
                     </div> -->
                     <button class="btn btn-success">Đặt vé</button>
+=======
+                    
+                    <button class="btn btn-success" name="insert_Ve">Đặt vé</button>
+>>>>>>> 9f47f78d57295b1fbae73f66d6277a6af6c0040b
                 </form>
             </div>
         </div>
