@@ -51,7 +51,9 @@ class DatVeController extends Controller
     public function dondatve(Request $request){
  
  
-        $data =array();
+        $data =array();// 
+        $data['TenPhim']=$request->TenPhim;
+        $data['TenTheLoai']=$request->TenTheLoai;
         $data['TenRap']=$request->TenRap;
         $data['ThoiGian']=$request->ThoiGian;
         $data['SoGhe']=$request->SoGhe;
@@ -62,23 +64,7 @@ class DatVeController extends Controller
   
         return view('Donthanhtoan');
     }
-    public function save_donDatVe(Request $request){
- 
- 
-        $data =array();
-        $data['IDDonDatVe']=$request->IDDonDatVe; 
- 
-        $data['TenRap']=$request->TenRap;
-        $data['ThoiGian']=$request->ThoiGian;
-        $data['SoGhe']=$request->SoGhe;
-        $data['HangGhe']=$request->HangGhe;
-        $data['NgayXem']=$request->NgayXem;
- 
-        DB::table('dondatve')->insert($data);
-  
-        return view('Donthanhtoan' );
-    }
-     
+    
  
     public function insert_Ve(){
         return view('Donthanhtoan');

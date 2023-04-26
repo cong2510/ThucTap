@@ -19,7 +19,8 @@
                 <h2 class="text-center">ĐẶT VÉ</h2>
             </div>
             <div class="panel-body">
-                <form method="post" action="{{URL::to('pay')}}" enctype="multipart/form-data">
+                <form method="post" action="{{URL::to('Donthanhtoan')}}" enctype="multipart/form-data">
+                    @csrf
                     <div class="form-group">
                         <label for="name">Tên phim:</label>
                         <div class="movie-name" name="TenPhim">
@@ -37,7 +38,7 @@
 
                     <div class="form-group">
                         <label for="name">Chọn Rạp Chiếu:</label>
-                        <select name="TenTheLoai" id="" class="form-control">
+                        <select name="TenRap" id="" class="form-control">
                             <option value=" ">Chọn Rạp Chiếu</option>
                             @foreach ( $Rap as $data)
                             <option value="{{ $data->TenRap }}">{{ $data->TenRap }}</option>
@@ -76,27 +77,15 @@
                         <input required="true" name="NgayXem" type="date" class="form-control" id="title" name="title"
                             value=" ">
                     </div>
-<<<<<<< HEAD
-                    <!-- <div class=" form-group">
-                        <label for="name">Số lượng vé:</label>
 
 
-                        <div class="product_count">
-                            <a onclick=" " class="increase items-count" type="button"><i
-                                    class="fa-solid fa-chevron-up"></i></a>
-                            <input disabled type="text" name="qty" id=" " maxlength="12" value="1 " title="Quantity:"
-                                class="input-text qty">
 
-                            <a onclick=" " class="reduced items-count" type="button"><i
-                                    class="fa-solid fa-chevron-down"></i></a>
-                        </div>
+                    <button type="submit" class="btn btn-success" name="insert_Ve"><a
+                            href="{{ route('Donthanhtoan' ) }}"
+                            style="font-weight: bold;color: white;text-decoration: none;font-size: 14px;padding: 8px;">Đặt
+                            Vé
+                        </a></button>
 
-                    </div> -->
-                    <button class="btn btn-success">Đặt vé</button>
-=======
-                    
-                    <button class="btn btn-success" name="insert_Ve">Đặt vé</button>
->>>>>>> 9f47f78d57295b1fbae73f66d6277a6af6c0040b
                 </form>
             </div>
         </div>

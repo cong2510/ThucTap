@@ -52,6 +52,9 @@ class DatVeController extends Controller
  
  
         $data =array();
+        $data['IDDonDatVe']=$request->IDDonDatVe; 
+        $data['TenPhim']=$request->TenPhim;
+        $data['TenTheLoai']=$request->TenTheLoai;
         $data['TenRap']=$request->TenRap;
         $data['ThoiGian']=$request->ThoiGian;
         $data['SoGhe']=$request->SoGhe;
@@ -67,7 +70,8 @@ class DatVeController extends Controller
  
         $data =array();
         $data['IDDonDatVe']=$request->IDDonDatVe; 
- 
+        $data['TenPhim']=$request->TenPhim;
+        $data['TenTheLoai']=$request->TenTheLoai;
         $data['TenRap']=$request->TenRap;
         $data['ThoiGian']=$request->ThoiGian;
         $data['SoGhe']=$request->SoGhe;
@@ -76,7 +80,7 @@ class DatVeController extends Controller
  
         DB::table('dondatve')->insert($data);
   
-        return view('Donthanhtoan' );
+        return view('Donthanhtoan');
     }
      
  

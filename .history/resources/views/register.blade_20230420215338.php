@@ -38,16 +38,14 @@
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="email" name="Username" id="email"
-                                                        class="form-control" />
+                                                    <input type="email" name="Username"  id="email" class="form-control" />
                                                     <label class="form-label" for="email">Email</label>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="password" name="Password" id="password"
-                                                        class="form-control" />
+                                                    <input type="password" name="Password" id="password" class="form-control" />
                                                     <label class="form-label" for="password">Mật khẩu</label>
                                                 </div>
                                             </div>
@@ -67,7 +65,7 @@
                                                 </label>
                                             </div>
                                             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                <button type="submit" class="btn btn-muave" name="insert_User"
+                                                <button type="submit" class="btn btn-muave"  name="insert_User"
                                                     style="background: #60CC00;color: white;font-size: 20px">ĐĂNG
                                                     KÝ</button>
                                             </div>

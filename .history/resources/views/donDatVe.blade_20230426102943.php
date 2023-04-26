@@ -26,11 +26,14 @@
                     @foreach($all_donDatVe as $key => $donDatVe)
                     <tr>
                         <td>{{$donDatVe->IDDonDatVe}} </td>
+
                         <td>{{$donDatVe->TenRap}} </td>
                         <td>{{$donDatVe->ThoiGian}} </td>
                         <td>{{$donDatVe->SoGhe}} </td>
                         <td>{{$donDatVe->HangGhe}} </td>
                         <td>{{$donDatVe->NgayXem}} </td>
+
+
                     </tr>
                     @endforeach
                 </tbody>

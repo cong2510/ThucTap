@@ -48,26 +48,13 @@ class DatVeController extends Controller
         $manager_Movie=view('/donDatVe')->with('/donDatVe',$all_donDatVe);
         return view('donDatVe')->with('all_donDatVe',$all_donDatVe);
     }
-    public function dondatve(Request $request){
- 
- 
-        $data =array();
-        $data['TenRap']=$request->TenRap;
-        $data['ThoiGian']=$request->ThoiGian;
-        $data['SoGhe']=$request->SoGhe;
-        $data['HangGhe']=$request->HangGhe;
-        $data['NgayXem']=$request->NgayXem;
- 
-        DB::table('dondatve')->insert($data);
-  
-        return view('Donthanhtoan');
-    }
     public function save_donDatVe(Request $request){
  
  
         $data =array();
         $data['IDDonDatVe']=$request->IDDonDatVe; 
- 
+        $data['TenPhim']=$request->TenPhim;
+        $data['TenTheLoai']=$request->TenTheLoai;
         $data['TenRap']=$request->TenRap;
         $data['ThoiGian']=$request->ThoiGian;
         $data['SoGhe']=$request->SoGhe;
@@ -76,7 +63,7 @@ class DatVeController extends Controller
  
         DB::table('dondatve')->insert($data);
   
-        return view('Donthanhtoan' );
+        return Redirect::to('donDatVe');
     }
      
  

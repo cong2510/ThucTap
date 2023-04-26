@@ -79,9 +79,6 @@ Route::get('/rap', function () {
 Route::get('/donDatVe', function () {
     return view('donDatVe');
 })->name('donDatVe');
-Route::get('/Donthanhtoan', function () {
-    return view('Donthanhtoan');
-})->name('Donthanhtoan');
  
 //User
 Route::get('/movieUser', [UserController::class, 'all_User'])->name('movieUser');
