@@ -52,14 +52,13 @@ class DatVeController extends Controller
     }
     public function dondatve(Request $request){
         $data =array();
-        $data['TenPhim']=$request->TenPhim;
-        $data['TenTheLoai']=$request->TenTheLoai;
         $data['TenRap']=$request->TenRap;
         $data['TenKH']=$request->TenKH;
         $data['ThoiGian']=$request->ThoiGian;
+        $data['SoGhe']=$request->SoGhe;
+        $data['HangGhe']=$request->HangGhe;
         $data['NgayXem']=$request->NgayXem;
-        $data['count']=$request->count;
-        $data['total']=$request->total;
+        $data['GiaVe']=$request->GiaVe;
  
         DB::table('dondatve')->insert($data);
   
@@ -70,14 +69,14 @@ class DatVeController extends Controller
  
  
         $data =array();
-        $data['TenPhim']=$request->TenPhim;
-        $data['TenTheLoai']=$request->TenTheLoai;
+        $data['IDDonDatVe']=$request->IDDonDatVe; 
+ 
         $data['TenRap']=$request->TenRap;
         $data['TenKH']=$request->TenKH;
         $data['ThoiGian']=$request->ThoiGian;
+        $data['SoGhe']=$request->SoGhe;
+        $data['HangGhe']=$request->HangGhe;
         $data['NgayXem']=$request->NgayXem;
-        $data['count']=$request->count;
-        $data['total']=$request->total;
  
         DB::table('dondatve')->insert($data);
   

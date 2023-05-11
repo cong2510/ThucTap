@@ -171,10 +171,10 @@
                             name="title" value="{{ $movie->TenTheLoai }} ">
                     </div>
                     <div class="form-group">
-                        <label for="name">Giá:
+                        <label for="name">Gia:
                         </label>
                         <div class="TenTheLoai" name="TenTheLoai">
-                            {{number_format($movie->Gia).' '.'VNĐ' }}
+                            {{ $movie['Gia'] }}
                         </div>
                     </div>
                     <div class="form-group">
@@ -306,7 +306,8 @@
                             </div>
 
                             <p class="text">
-                                Bạn đang chọn <span id="count" name="count">0</span> ghế với tổng giá.
+                                Bạn đang chọn <input required="true" name="count" type="text" class="form-control"
+                                    id="title" name="title" value=" count"> ghế với tổng giá.
                                 <span id="total" name="total">0</span>
                             </p>
                         </div>

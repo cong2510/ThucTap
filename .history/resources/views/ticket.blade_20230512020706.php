@@ -329,7 +329,7 @@
     const total = document.getElementById('total');
     const movieSelect = document.getElementById('movie');
 
-    let ticketPrice = +movieSelect.value;
+    let ticketPrice = +movieSelect.value
 
     //Update total and count
     function updateSelectedCount() {
@@ -341,7 +341,10 @@
 
     //Movie Select Event
     movieSelect.addEventListener('change', e => {
-        ticketPrice = +e.target.value;
+        ticketPrice = +e.target.value.toLocaleString('vi', {
+            style: 'currency',
+            currency: 'VND'
+        });
         updateSelectedCount();
     });
 

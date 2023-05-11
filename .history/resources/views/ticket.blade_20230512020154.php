@@ -224,7 +224,7 @@
                     <div class="movie-container">
                         {{-- Phai them bang gia ve --}}
                         {{-- <input id="movie" value="{{ $movie['Gia'] }}" type="hidden"> --}}
-                        <input id="movie" value="{{ $movie['Gia'] }}" type="hidden">
+                        <input id="movie" value="{{number_format($movie->Gia).' '.'VNĐ' }}" type="hidden">
 
                         <ul class="showcase">
                             <li>

@@ -341,7 +341,10 @@
 
     //Movie Select Event
     movieSelect.addEventListener('change', e => {
-        ticketPrice = +e.target.value;
+        ticketPrice = +e.target.value.toLocaleString('vi', {
+            style: 'currency',
+            currency: 'VND'
+        });
         updateSelectedCount();
     });
 

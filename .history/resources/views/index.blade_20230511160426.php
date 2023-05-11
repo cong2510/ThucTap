@@ -46,7 +46,6 @@
                                             {{ $movie['TenPhim'] }}
                                         </a>
                                     </div>
-
                                 </div>
                                 <div class="card-footer bg-transparent border-top-0">
                                     <div class="align-self-end">

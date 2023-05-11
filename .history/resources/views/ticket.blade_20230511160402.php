@@ -158,23 +158,16 @@
                     @csrf
                     <div class="form-group">
                         <label for="name">Tên phim:</label>
-
-                        <input required="true" name="TenPhim" type="text" class="form-control" id="title" name="title"
-                            value="{{ $movie->TenPhim }} ">
+                        <div class="movie-name" name="TenPhim">
+                            {{ $movie['TenPhim'] }}
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label for="name">Tên Thể Loại:
                         </label>
-
-                        <input required="true" name="TenTheLoai" type="text" class="form-control" id="title"
-                            name="title" value="{{ $movie->TenTheLoai }} ">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Giá:
-                        </label>
                         <div class="TenTheLoai" name="TenTheLoai">
-                            {{number_format($movie->Gia).' '.'VNĐ' }}
+                            {{ $movie['TenTheLoai'] }}
                         </div>
                     </div>
                     <div class="form-group">
@@ -192,30 +185,20 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class=" form-group">
-                        <label for="name">Ngày Xem:</label>
-                        <input required="true" name="NgayXem" type="date" class="form-control" id="title" name="title"
-                            value="{{ date('Y-m-d') }}" min="{{ date('Y-m-d') }}">
-                    </div>
                     <div class="form-group">
                         <label for="name">Chọn suất Chiếu:</label>
                         <select name="ThoiGian" id="" class="form-control">
-                            <option value="">Chọn suất chiếu</option>
+                            <option value=" ">Chọn suất chiếu Chiếu</option>
                             <?php
+    <?php
     // Set the new timezone
     date_default_timezone_set('Asia/Ho_Chi_Minh');
-    $current_time = time();
+    $date = date(' H:i');
+    echo $date;
     ?>
-
                             @foreach ($Suatchieu as $data )
-                            <?php
-        // Convert the ThoiGian value to a timestamp
-        $suatchieu_time = strtotime($data->ThoiGian);
-        ?>
-
-                            @if($suatchieu_time > $current_time)
+                            @if($date )
                             <option value="{{ $data->ThoiGian }}">{{ $data->ThoiGian }}</option>
-                            @endif
                             @endforeach
                         </select>
                     </div>
@@ -223,8 +206,8 @@
                     {{-- Rap --}}
                     <div class="movie-container">
                         {{-- Phai them bang gia ve --}}
-                        {{-- <input id="movie" value="{{ $movie['Gia'] }}" type="hidden"> --}}
-                        <input id="movie" value="{{ $movie['Gia'] }}" type="hidden">
+                        {{-- <input id="movie" value="{{ $movie['GiaVe'] }}" type="hidden"> --}}
+                        <input id="movie" value="50" type="hidden">
 
                         <ul class="showcase">
                             <li>
@@ -306,12 +289,36 @@
                             </div>
 
                             <p class="text">
-                                Bạn đang chọn <span id="count" name="count">0</span> ghế với tổng giá.
-                                <span id="total" name="total">0</span>
+                                Bạn đang chọn <span id="count">0</span> ghế với tổng giá.
+                                <span id="total">0</span>
                             </p>
                         </div>
                     </div>
                     {{-- Rap --}}
+
+                    <div class="form-group">
+                        <label for="name">Chọn Số Ghế:</label>
+                        <select name="SoGhe" id="" class="form-control">
+                            <option value=" ">Chọn Số Ghế:</option>
+                            @foreach ($Ghe as $data)
+                            <option value="{{ $data->SoGhe }}">{{ $data->SoGhe }}</option>
+                            @endforeach
+                        </select>
+                        <label for="name">Chọn Hàng Ghế:</label>
+                        <select name="HangGhe" id="" class="form-control">
+                            <option value=" ">Chọn Hàng Ghế:</option>
+                            @foreach ($Ghe as $data)
+                            <option value="{{ $data->HangGhe }}">{{ $data->HangGhe }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class=" form-group">
+                        <label for="name">Ngày Xem:</label>
+
+                        <input required="true" name="NgayXem" type="date" class="form-control" id="title" name="title"
+                            value=" ">
+                    </div>
+
 
 
                     <button type="submit" class="btn btn-success" name="insert_Ve">Đặt vé</button>

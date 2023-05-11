@@ -171,7 +171,7 @@
                             name="title" value="{{ $movie->TenTheLoai }} ">
                     </div>
                     <div class="form-group">
-                        <label for="name">Giá:
+                        <label for="name">Gia:
                         </label>
                         <div class="TenTheLoai" name="TenTheLoai">
                             {{number_format($movie->Gia).' '.'VNĐ' }}
@@ -224,7 +224,7 @@
                     <div class="movie-container">
                         {{-- Phai them bang gia ve --}}
                         {{-- <input id="movie" value="{{ $movie['Gia'] }}" type="hidden"> --}}
-                        <input id="movie" value="{{ $movie['Gia'] }}" type="hidden">
+                        <input id="movie" value="{{number_format($movie->Gia).' '.'VNĐ' }}" type="hidden">
 
                         <ul class="showcase">
                             <li>

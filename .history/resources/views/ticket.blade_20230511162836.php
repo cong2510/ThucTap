@@ -158,23 +158,16 @@
                     @csrf
                     <div class="form-group">
                         <label for="name">Tên phim:</label>
-
-                        <input required="true" name="TenPhim" type="text" class="form-control" id="title" name="title"
-                            value="{{ $movie->TenPhim }} ">
+                        <div class="movie-name" name="TenPhim">
+                            {{ $movie['TenPhim'] }}
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label for="name">Tên Thể Loại:
                         </label>
-
-                        <input required="true" name="TenTheLoai" type="text" class="form-control" id="title"
-                            name="title" value="{{ $movie->TenTheLoai }} ">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Giá:
-                        </label>
                         <div class="TenTheLoai" name="TenTheLoai">
-                            {{number_format($movie->Gia).' '.'VNĐ' }}
+                            {{ $movie['TenTheLoai'] }}
                         </div>
                     </div>
                     <div class="form-group">
@@ -223,8 +216,8 @@
                     {{-- Rap --}}
                     <div class="movie-container">
                         {{-- Phai them bang gia ve --}}
-                        {{-- <input id="movie" value="{{ $movie['Gia'] }}" type="hidden"> --}}
-                        <input id="movie" value="{{ $movie['Gia'] }}" type="hidden">
+                        {{-- <input id="movie" value="{{ $movie['GiaVe'] }}" type="hidden"> --}}
+                        <input id="movie" value="50" type="hidden">
 
                         <ul class="showcase">
                             <li>
@@ -245,7 +238,7 @@
                             <div class="screen"></div>
 
                             <div class="row">
-                                <div class="seat"></div>
+                                <div class="seat">A</div>
                                 <div class="seat"></div>
                                 <div class="seat"></div>
                                 <div class="seat"></div>
@@ -306,12 +299,16 @@
                             </div>
 
                             <p class="text">
-                                Bạn đang chọn <span id="count" name="count">0</span> ghế với tổng giá.
-                                <span id="total" name="total">0</span>
+                                Bạn đang chọn <span id="count">0</span> ghế với tổng giá.
+                                <span id="total">0</span>
                             </p>
                         </div>
                     </div>
                     {{-- Rap --}}
+
+
+
+
 
 
                     <button type="submit" class="btn btn-success" name="insert_Ve">Đặt vé</button>

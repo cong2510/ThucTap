@@ -22,7 +22,7 @@ class MovieController extends Controller
         ]);
     }
 
-    public function movie($id )
+    public function movie($id,$tenphim)
     {
         $movie = Movie::find($id);
         $theloais = Theloai::all();

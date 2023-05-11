@@ -14,26 +14,24 @@ class MovieController extends Controller
     {
         $date = new DateTime();
         $movies = Movie::all();
-        $Ve =Ve::all();
         return view('index', [
             'movies' => $movies,
             'date' => $date,
-            'Ve' =>$Ve,
         ]);
     }
 
-    public function movie($id )
+    public function movie($id)
     {
         $movie = Movie::find($id);
         $theloais = Theloai::all();
-     
-        if ($movie === null  ) {
+        $Ve =Ve::all();
+        if ($movie === null) {
             return view('errors.404');
         } else {
             return view('movie', [
                 'movie' => $movie,
                 'theloais' =>$theloais,
-             
+                've' =>$Ve,
             ]);
         }
     }

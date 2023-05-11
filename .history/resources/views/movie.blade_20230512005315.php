@@ -84,7 +84,7 @@
                     </li>
                     <li>
                         <span class="col-left">Giá vé: </span>
-                        <span class="col-right">{{ $movie['Gia'] }}</span>
+                        <span class="col-right"> </span>
                     </li>
                     <li>
                         <span class="col-left">

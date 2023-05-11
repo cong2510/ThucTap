@@ -22,18 +22,18 @@ class MovieController extends Controller
         ]);
     }
 
-    public function movie($id )
+    public function movie($id,$tenphim)
     {
         $movie = Movie::find($id);
         $theloais = Theloai::all();
-     
-        if ($movie === null  ) {
+        $Ve =Ve::find($tenphim);
+        if ($movie === null && $tenphim === null) {
             return view('errors.404');
         } else {
             return view('movie', [
                 'movie' => $movie,
                 'theloais' =>$theloais,
-             
+                'Ve' =>$Ve,
             ]);
         }
     }

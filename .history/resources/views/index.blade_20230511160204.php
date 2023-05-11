@@ -10,7 +10,12 @@
 </head>
 
 <body>
-
+    <?php
+// Set the new timezone
+date_default_timezone_set("Asia/Ho_Chi_Minh");
+$date = date('  H:i:s ');
+echo "Hiện tại:".date('H:i:s d-m-Y');
+?>
     <!--Main Navigation-->
     <header>
         <x-navbar />
@@ -46,7 +51,6 @@
                                             {{ $movie['TenPhim'] }}
                                         </a>
                                     </div>
-
                                 </div>
                                 <div class="card-footer bg-transparent border-top-0">
                                     <div class="align-self-end">

@@ -158,23 +158,23 @@
                     @csrf
                     <div class="form-group">
                         <label for="name">Tên phim:</label>
-
-                        <input required="true" name="TenPhim" type="text" class="form-control" id="title" name="title"
-                            value="{{ $movie->TenPhim }} ">
+                        <div class="movie-name" name="TenPhim">
+                            {{ $movie['TenPhim'] }}
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <label for="name">Tên Thể Loại:
                         </label>
-
-                        <input required="true" name="TenTheLoai" type="text" class="form-control" id="title"
-                            name="title" value="{{ $movie->TenTheLoai }} ">
+                        <div class="TenTheLoai" name="TenTheLoai">
+                            {{ $movie['TenTheLoai'] }}
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="name">Giá:
+                        <label for="name">Gia:
                         </label>
                         <div class="TenTheLoai" name="TenTheLoai">
-                            {{number_format($movie->Gia).' '.'VNĐ' }}
+                            {{ $movie['Gia'] }}
                         </div>
                     </div>
                     <div class="form-group">
@@ -306,8 +306,8 @@
                             </div>
 
                             <p class="text">
-                                Bạn đang chọn <span id="count" name="count">0</span> ghế với tổng giá.
-                                <span id="total" name="total">0</span>
+                                Bạn đang chọn <span id="count">0</span> ghế với tổng giá.
+                                <span id="total">0</span>
                             </p>
                         </div>
                     </div>

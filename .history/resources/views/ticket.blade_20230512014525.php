@@ -171,10 +171,10 @@
                             name="title" value="{{ $movie->TenTheLoai }} ">
                     </div>
                     <div class="form-group">
-                        <label for="name">Giá:
+                        <label for="name">Gia:
                         </label>
                         <div class="TenTheLoai" name="TenTheLoai">
-                            {{number_format($movie->Gia).' '.'VNĐ' }}
+                            {{ $movie['Gia'] }}
                         </div>
                     </div>
                     <div class="form-group">

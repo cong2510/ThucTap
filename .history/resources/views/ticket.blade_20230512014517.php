@@ -158,9 +158,11 @@
                     @csrf
                     <div class="form-group">
                         <label for="name">Tên phim:</label>
-
-                        <input required="true" name="TenPhim" type="text" class="form-control" id="title" name="title"
-                            value="{{ $movie->TenPhim }} ">
+                        <div class="movie-name" value="{{ $movie->TenPhim }}" name="TenPhim">
+                            {{ $movie['TenPhim'] }}
+                        </div>
+                        <input required="true" name="TenTheLoai" type="text" class="form-control" id="title"
+                            name="title" value="{{ $movie->TenTheLoai }} ">
                     </div>
 
                     <div class="form-group">
@@ -171,10 +173,10 @@
                             name="title" value="{{ $movie->TenTheLoai }} ">
                     </div>
                     <div class="form-group">
-                        <label for="name">Giá:
+                        <label for="name">Gia:
                         </label>
                         <div class="TenTheLoai" name="TenTheLoai">
-                            {{number_format($movie->Gia).' '.'VNĐ' }}
+                            {{ $movie['Gia'] }}
                         </div>
                     </div>
                     <div class="form-group">

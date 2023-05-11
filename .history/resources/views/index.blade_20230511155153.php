@@ -10,7 +10,17 @@
 </head>
 
 <body>
+    <?php
 
+print date("m/d/y G.i:s<br>", time());
+
+echo "<br>";
+
+print "Today is ";
+
+print date("j of F Y, \a\\t g.i a", time());
+
+?>
     <!--Main Navigation-->
     <header>
         <x-navbar />
@@ -46,7 +56,6 @@
                                             {{ $movie['TenPhim'] }}
                                         </a>
                                     </div>
-
                                 </div>
                                 <div class="card-footer bg-transparent border-top-0">
                                     <div class="align-self-end">

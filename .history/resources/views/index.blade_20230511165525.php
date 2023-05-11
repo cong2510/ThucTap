@@ -46,7 +46,11 @@
                                             {{ $movie['TenPhim'] }}
                                         </a>
                                     </div>
-
+                                    <div class="text-center">
+                                        <a href="{{ route('movie', $movie['IDPhim']) }}" class="product-name">
+                                            {{ $Ve['GiaVe'] }}
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="card-footer bg-transparent border-top-0">
                                     <div class="align-self-end">
